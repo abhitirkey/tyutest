@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import Col from  'react-bootstrap/Col'
-import banner_gif from './banner.png'
+import banner_gif from './banner.gif'
 
 import {FaRupeeSign} from 'react-icons/fa'
 
@@ -29,7 +29,7 @@ function Banner() {
                     </Col>
                 </Row>
             </Container>
-            <div className="marquee"><span>Explore the plethora of options available - <strong><Link to="/contact-us">Apply Now!</Link></strong></span></div>
+            <div className="marquee"><span>Python Django developer batch starts 18<span class="supertext">th</span> Jan, '21 - Apply Now!</span></div>
         </div>
     )
 }

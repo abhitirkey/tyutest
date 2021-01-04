@@ -7,9 +7,9 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-import CoursesGIF from './Courses.png'
-import JobGIF from './Job.png'
-import MentorGIF from './Mentors.png'
+import CoursesGIF from './Courses.gif'
+import JobGIF from './Job.gif'
+import MentorGIF from './Mentors.gif'
 
 function Who() {
     return (
@@ -36,12 +36,12 @@ function Who() {
                     </Col>
                 </Row>
                 <Row className="thirdRow">
-                    <Col className="WhoCol" sm={{span:12}} sm={{span:12}} md={{span:6}}>
+                    <Col className="WhoCol" xs={{span:12}} sm={{span:12}} md={{span:6}}>
                         <img className="lastImage" src={JobGIF} alt="Job"/>
                     </Col>
-                    <Col className="WhoCol" sm={{span:12}} sm={{span:12}} md={{span:6}}>
+                    <Col className="WhoCol" xs={{span:12}} sm={{span:12}} md={{span:6}}>
                         <span>Find your internship and job</span>
-                        <Link to="/contact-us" target="_blank"><button className="theme-hollow-btn">Click Here</button></Link>
+                        <a href="https://login.tyutee.com" target="_blank" rel="noreferrer" className="theme-hollow-btn grayed grayLink">Click Here</a>
                     </Col>
                 </Row>
             </Container>

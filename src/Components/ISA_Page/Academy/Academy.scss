@@ -2,6 +2,8 @@
 
 .academy-container {
     margin-top: 50px;
+    max-width: 100%;
+    padding:0;
 }
 .academy-title {
     font-weight: bolder;
@@ -82,5 +84,8 @@
     }
     .image-container {
       margin-bottom: 30px;
+    }
+    .sessions-text {
+        display:none;
     }
 }

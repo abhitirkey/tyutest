@@ -3,7 +3,7 @@ import './Academy.scss'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import Col from  'react-bootstrap/Col'
-import academic from './Academy101.png'
+import academic from './Academy101.gif'
 import {FaRupeeSign} from 'react-icons/fa'
 import {ImInfinite} from 'react-icons/im'
 
@@ -34,7 +34,7 @@ function Academy() {
                                     </div>
                                     <div className="statsCol">
                                         <h1><ImInfinite/></h1>
-                                        <span>Career Counseling Sessions</span>
+                                        <span>Career Counselling <span className="sessions-text">Sessions</span></span>
                                     </div>
                                     <div className="statsCol">
                                         <h1>200</h1>
@@ -43,7 +43,7 @@ function Academy() {
 
                                 {/* <div className="statsRow"><span style={{marginTop: '25px'}}>* Complementary access to tyutee platform</span></div> */}
                         </Col>
-                        <Col sm={{span: 12, order: 1}} xs={{ span: 12, order: 1 }} md={{ span: 4, order: 2 }}><div className="image-container"><img src={academic}/></div></Col>
+                        <Col sm={{span: 12, order: 1}} xs={{ span: 12, order: 1 }} md={{ span: 4, order: 2 }}><div className="image-container"><img src={academic} alt="academic"/></div></Col>
                     </Row>
                     <Row>
                         <Col>

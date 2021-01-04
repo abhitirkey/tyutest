@@ -29,9 +29,9 @@ class Header extends React.Component {
 
     render(){
 
-        let navMenuClass = 'NavMenuList DropDownInActive';
+        let navMenuClass = 'NavMenuList DropDownInActive ISA';
         if(this.state.displayDropDownNav){
-            navMenuClass = 'NavMenuList DropDownActive';
+            navMenuClass = 'NavMenuList DropDownActive ISA';
         }
             return (
                 <nav className="NavContainer">
@@ -39,10 +39,10 @@ class Header extends React.Component {
                     <ul className={navMenuClass}>
                         
                         <li className="closeMenu" onClick={this.hideNav}><FaTimes/></li>
-                        <Link className="navlink" to='/courses'><li>Courses</li></Link>
-                        <Link className="navlink" to='/hire'><li>Hire From Us</li></Link>
-                        <Link className="navlink" to='/isa'><li>Fees & ISA</li></Link>
-                        <Link className="navlink" to='/faq'><li>FAQ</li></Link>
+                        <Link className="navlink" to='/coming-soon' target="_blank"><li>Courses</li></Link>
+                        <Link className="navlink" to='/coming-soon' target="_blank"><li>Hire From Us</li></Link>
+                        <Link className="navlink" to='/coming-soon' target="_blank"><li>Fees & ISA</li></Link>
+                        <Link className="navlink" to='/coming-soon' target="_blank"><li>FAQ</li></Link>
                         <li><a href="https://login.tyutee.com" target="_blank" rel="noreferrer" className="login-btn themeLink">Login</a></li>
                     </ul>
                     <div className="menuIcon" onClick={this.showNav}><FaBars/></div>

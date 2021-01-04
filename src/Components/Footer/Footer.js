@@ -1,7 +1,10 @@
 import React from 'react'
 import './Footer.scss'
 import logo from './tyutee-logo.png'
-import { FaFacebookF, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+// import { FaFacebookF, FaInstagram, FaLinkedinIn} from 'react-icons/fa'
+import FacebookIcon from './facebook.png'
+import InstagramIcon from './instagram.png'
+import LinkedInIcon from './linkedin.png'
 
 import {Link} from 'react-router-dom'
 
@@ -18,25 +21,29 @@ function Footer() {
                 <div className="space-div"></div>
                 <div className="footer-col right">
                     <div className="links-cluster">
-                        <Link to='/about'>About us</Link>
-                        <Link to='/be-a-mentor'>Become a mentor</Link>
-                        <Link to="/income">Income Share Agreement</Link>
-                        <Link to="/contact-us">Contact Us</Link>
-                        <Link to="/careers">Careers</Link>
+                        <a href='/coming-soon' target="_blank" rel="noreferrer">About us</a>
+                        <a href='/coming-soon' target="_blank" rel="noreferrer">Become a mentor</a>
+                        <a href="/coming-soon" target="_blank" rel="noreferrer">Income Share Agreement</a>
+                        <a href="/contact-us" target="_blank" rel="noreferrer">Contact Us</a>
+                        <a href="/coming-soon" target="_blank" rel="noreferrer">Careers</a>
                     </div>
                 </div>
             </div>
             <div className="footer-row bottom">
                 <div className="footer-col left">
-                    <p><FaFacebookF className="social-icon"/><FaInstagram className="social-icon"/><FaLinkedinIn className="social-icon"/></p>
+                    <p>
+                        <img src={FacebookIcon} alt="facebook" width='100%'/>
+                        <a href="https://www.instagram.com/insta.tyutee" target="_blank" rel="noreferrer"><img src={InstagramIcon} alt="instagram"/></a>
+                        <a href="https://in.linkedin.com/company/tyutee" target="_blank" rel="noreferrer"><img style={{borderRadius: '5px'}} src={LinkedInIcon} alt="linkedin"/></a>
+                    </p>
                     <span>© 2021. Shramista Tech Private Limited
     | All rights reserved</span>
                 </div>
                 <div className="space-div"></div>
                 <div className="footer-col right">
-                        <Link to="/income">Blog</Link> | 
-                        <Link to="/privacy-policy"> Privacy Policy</Link> | 
-                        <Link to="/terms-of-use"> Terms of Use</Link> 
+                        <a href="/coming-soon" target="_blank" rel="noreferrer">Blog</a> | 
+                        <a href="/privacy-policy" target="_blank" rel="noreferrer"> Privacy Policy</a> | 
+                        <a href="/terms-of-use" target="_blank" rel="noreferrer"> Terms of Use</a> 
                 </div>
                    
             </div>

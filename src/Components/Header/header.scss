@@ -15,6 +15,10 @@
     align-items: center;
     justify-content: space-between;
 
+    .ISA {
+        // This is only for the ISA page
+        font-size: 1.1rem;
+    }
     .NavMenuList {
         display: inline-flex;
         margin-bottom: 0;

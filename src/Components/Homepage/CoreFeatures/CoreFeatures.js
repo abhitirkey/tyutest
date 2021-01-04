@@ -46,11 +46,11 @@ function CoreFeatures() {
                     </Row>
                     <Row>
                      
-                        <Col className="featureCol" xs={{span: 12}} sm={{span: 12}} md={{span: 4}} md={{ span: 4, offset: 2}}>
+                        <Col className="featureCol" xs={{span: 12}} sm={{span: 12}} md={{span: 4}} lg={{ span: 4, offset: 2}}>
                             <img src={FeaturesArray[6].imageSRC} alt={FeaturesArray[6].title}/>
                             <span className="boldText">{FeaturesArray[6].title}</span>
                         </Col>
-                        <Col className="featureCol" xs={{span: 12}} sm={{span: 12}} md={{span: 4}} md={{ span: 4}}>
+                        <Col className="featureCol" xs={{span: 12}} sm={{span: 12}} md={{span: 4}} lg={{ span: 4}}>
                             <img src={FeaturesArray[7].imageSRC} alt={FeaturesArray[7].title}/>
                             <span className="boldText">{FeaturesArray[7].title}</span>
                         </Col>

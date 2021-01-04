@@ -35,6 +35,12 @@ a {
     color: $themePink;
 }
 
+.supertext {
+    position: relative;
+    bottom: 1ex; 
+    font-size: 80%;  
+}
+
 .theme-btn {
     background: $gradientBackground;
     cursor: pointer;

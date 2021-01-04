@@ -10,6 +10,7 @@ import ISA_Page from './Components/ISA_Page/ISA_Page'
 import ContactUs from './Components/ContactUs/ContactUs'
 import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy'
 import TermsOfUse from './Components/TermsOfUse/TermsOfUse'
+import ComingSoon from './Components/Pages/ComingSoon/ComingSoon'
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                 <Route path='/contact-us' exact component={ContactUs}/>
                 <Route path='/terms-of-use' exact component={TermsOfUse}/>
                 <Route path='/privacy-policy' exact component={PrivacyPolicy}/>
+                <Route path="/coming-soon" exact component={ComingSoon}/>
             </Switch>
             <Footer/>
         </div>

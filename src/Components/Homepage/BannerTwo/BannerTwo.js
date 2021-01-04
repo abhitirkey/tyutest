@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './BannerTwo.scss'
 
+import {FaQuoteLeft, FaQuoteRight} from 'react-icons/fa'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import Col from  'react-bootstrap/Col'
@@ -27,9 +28,9 @@ export class BannerTwo extends Component {
                         </Col>
                         <Col className="banner2textCol" sm={{span: 12, order:2}} xs={{ span: 12, order:2}} md={{ span: 5, order: 2}}>
                             <p>
-                                <span>The next Gen SaaS-based</span>
+                                <span><FaQuoteLeft/>The next Gen SaaS-based</span>
                                 <span>peer to peer student learning,</span>
-                                <span>networking and upskilling platform.</span>
+                                <span>networking and upskilling platform.<FaQuoteRight/></span>
                             </p>
                         </Col>
                     </Row>

@@ -1,6 +1,8 @@
 import React, {useLayoutEffect} from 'react'
 import Header from '../Header/Header'
 
+import {Link} from 'react-router-dom'
+
 import './TermsOfUse.scss'
 
 function TermsOfUse() {
@@ -17,7 +19,7 @@ function TermsOfUse() {
                     <h2 style={{fontWeight: 'bolder'}}>Terms of Use</h2>
                 </div>
                 <div className="textBody">
-                    <p><strong>1.</strong> Important: The usage of this website (<span className="pinkText">www.tyutee.com</span>) is governed by the following terms ("Terms").
+                    <p><strong>1.</strong> Important: The usage of this website (<Link to="/" target="_blank"><span className="pinkText">www.tyutee.com</span></Link>) is governed by the following terms ("Terms").
 </p>
                     
                     <p><strong>2.</strong> Acceptance: Please read the Terms, carefully before using this website, since using this website implies your implicit and binding acceptance of these Terms.
@@ -28,7 +30,7 @@ function TermsOfUse() {
 
 "Shramista" refers to Shramista Tech Private Limited, India.<br/>
 
-"Site" refers to <span className="pinkText">www.tyutee.com</span> owned and monitored by Shramista.<br/>
+"Site" refers to <Link to="/" target="_blank"><span className="pinkText">www.tyutee.com</span></Link> owned and monitored by Shramista.<br/>
 
 "User" refers to anyone who is browsing this site.
 </p>

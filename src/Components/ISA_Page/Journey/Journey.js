@@ -1,6 +1,5 @@
 import React from 'react'
 import './Journey.scss'
-import {GoChecklist} from 'react-icons/go'
 
 import Step from './Step/Step'
 import StepsArray from './StepsArray'

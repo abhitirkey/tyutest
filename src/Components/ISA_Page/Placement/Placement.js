@@ -3,7 +3,7 @@ import './Placement.scss'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row'
 import Col from  'react-bootstrap/Col'
-import placement_gif from './Placement.png'
+import placement_gif from './Placement.gif'
 
 import {FaRupeeSign} from 'react-icons/fa'
 
