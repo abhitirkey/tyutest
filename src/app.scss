@@ -38,7 +38,7 @@ a {
 .supertext {
     position: relative;
     bottom: 1ex; 
-    font-size: 80%;  
+    font-size: 70%;  
 }
 
 .theme-btn {
@@ -53,11 +53,11 @@ a {
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
-    opacity: 90%;
+    // opacity: 90%;
     width: fit-content;
     &:hover
     {
-        opacity: 100%;
+        // opacity: 100%;
     }
 
     &:focus {
@@ -90,11 +90,11 @@ a {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    opacity: 90%;
+    // opacity: 90%;
     width: fit-content;
 
     &:hover {
-        opacity: 100%;
+        // opacity: 100%;
     }
 
     &:focus {

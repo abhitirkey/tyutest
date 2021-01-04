@@ -147,10 +147,6 @@
 }
 
 @media only screen and (max-width: 480px){
-    .banner .container .bannerCol {
-       
-        
-    }
     .banner {
         height: 87.75vh;
         margin-bottom: 12.25vh;
@@ -180,6 +176,7 @@
     }
 
     .marquee {
+        padding: 0.5rem 0;
         span{
             font-size: 4.5vw;
         }
