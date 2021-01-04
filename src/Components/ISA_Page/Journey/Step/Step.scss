@@ -1,0 +1,76 @@
+@import "../../../sass-global.scss";
+
+.journey-step {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+
+    .icon-container{
+
+        position: relative;
+        height: 100px;
+        width: 100px;
+
+        .icon {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            font-size: 75px;
+            border: 2px solid $themePink;
+            border-radius: 50%    ;
+            -webkit-border-radius: 50%    ;
+            -moz-border-radius: 50%    ;
+            -ms-border-radius: 50%    ;
+            -o-border-radius: 50%    ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition-duration: 0.2s;
+            background-color: white;
+            z-index: 200;
+            img {
+                width: 60%;
+            }
+        }
+
+        .highlightedIcon {
+            background-color: $themePink;
+            height: 110px;
+            width: 110px;
+            left: -5px;
+            top: -5px;
+            box-shadow: 4px 4px 50px rgba(185, 35, 82, 0.35);
+        }
+    
+    }
+
+    
+    .vline {
+        height: 37px;
+        width: 3px;
+        background-color: $defaultFontColor;
+        box-sizing:content-box;
+        z-index:100;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        background-color: $defaultFontColor;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        z-index:100;
+    }
+
+    .title {
+       padding: 0.5rem 0;
+       background-color:white;
+       z-index:100;
+    }
+}

@@ -1,0 +1,129 @@
+@import "../sass-global";
+
+.NavContainer {
+    position: relative;
+    height:75px;
+    box-sizing: border-box;
+    position: fixed; 
+    width: 100%;
+
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 3px 5px 6px rgba(126, 126, 126, 0.082);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .NavMenuList {
+        display: inline-flex;
+        margin-bottom: 0;
+        align-items: center;
+        li a {
+            margin-left: 30px;
+        }
+        .navlink {
+            margin-left: 30px;
+            display: flex;
+            align-items: center;
+
+            color: #797979;  
+
+            &:hover {
+                color: rgb(102, 102, 102);
+                text-decoration: none;
+                outline: none;
+            }
+            &:active {
+                color: inherit;
+            }
+        }
+        .closeMenu {
+            display: none;
+            position: absolute;
+            z-index: 55;
+            right: 20px;
+            top: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: rgb(218, 218, 218);
+            &:hover {
+                 color: rgb(190, 190, 190);
+            }
+        }
+    }
+
+    .menuIcon {
+        display: none;
+        margin-right: 20px;
+        cursor: pointer;
+        color: rgb(177, 177, 177);
+        font-size: 30px;
+        &:hover {
+            color: rgb(158, 156, 156);
+        }
+    }
+    
+}
+
+.login-btn {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    color: $themePink;
+    padding: 5px 20px;
+    border: 2px solid $themePink;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    opacity: 90%;
+
+    &:hover {
+        opacity: 100%;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@media (max-width: 868px){
+    .NavContainer {
+        
+        .NavMenuList {
+            position: fixed;
+            height: 100vh;
+            width: 90%;
+            z-index: 50;
+            top: 0;
+            left: 0;
+            background-color:white;
+
+            .closeMenu {
+                display: block;
+            }
+
+            li {
+                margin-bottom: 45px;
+            }
+            box-shadow: 0 3px 5px 6px rgb(240, 240, 240);
+        }
+
+        .DropDownInActive {
+            display: none;
+        }
+
+        .DropDownActive {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menuIcon {
+            display: block;
+        }
+    }
+}

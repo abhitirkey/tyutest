@@ -1,0 +1,43 @@
+@import "../../sass-global.scss";
+
+.placement {
+    position: relative;
+    background: #FAF5F6;
+    .placementCol {
+        text-align: center;
+        h2 strong {
+            color: $themePink;
+        }
+        img {
+            width: 60%;
+        }
+    }
+    .bullet-list {
+        margin-top: 50px;
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50%;
+    }
+    .bullet-point {
+        display: flex;
+
+        .box {
+            background-color: #B92352;
+            width: 1vw;
+            margin-right: 1.5rem;
+            flex: none;
+        }
+        span {
+            text-align: left;
+        }
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .placementCol h2 {
+        margin-top: 5vh;
+    }
+}

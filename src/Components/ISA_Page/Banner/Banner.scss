@@ -1,0 +1,188 @@
+@import "../../sass-global.scss";
+
+.banner {
+    position: relative;
+    height: 100vh;
+
+    display:flex;
+    flex-direction: column;
+
+    .container {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        max-width: 90%;
+        padding:0;
+        margin:0;
+
+        .row {
+            width: inherit;
+        }
+        .bannerCol {
+            padding:0;
+            margin:0;
+            h1, h2 {
+                color: $themePink;
+                font-weight: bolder;
+            }
+            span {
+                font-size: 1.3rem;
+                svg {
+                    margin-bottom: 0.15em;
+                }
+            }
+            img {
+                width: 80%;
+            }
+        }
+    
+        .text {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            justify-content: center;
+            z-index: 50;
+            span {
+                margin: 1% 0;
+            }
+            button {
+                margin-top: 3%;
+                font-size:1.2rem;
+            }
+        }
+    
+        .image {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+}
+
+.titleMobile {
+    visibility: hidden;
+    height: 0;
+}
+
+.marquee {
+    background: $gradientBackground;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1%;
+    text-align: center;
+
+    width: 100%;
+
+    a {
+        color: white;
+        &:hover {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}
+
+@media only screen and (max-height: 620px){
+    // For adjusting GIF top on browser height resize 
+    .banner .container .bannerCol img {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .banner {
+        .container{
+            .bannerCol{
+                .titleDesktop {
+                    visibility: hidden;
+                    height:0;
+                }
+                .titleMobile {
+                    visibility: visible;
+                    height:fit-content;
+                }
+            }
+
+            .text {
+                top: 3vh;
+                text-align: center;
+                button {
+                    margin: 1% auto 0 auto;
+                }
+    
+                span {
+                    margin: 0.5vh 0;
+                }
+    
+                h2 {
+                    font-size:1.5em;
+                }
+                
+            }
+
+            .image {
+                justify-content: center;
+                img {
+                    width: 50%;
+                }
+            }
+        }
+        
+        
+    }
+}
+
+@media only screen and (max-width: 536px){
+    .banner .text {
+        top: 4vh;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .banner .container .bannerCol {
+       
+        
+    }
+    .banner {
+        height: 87.75vh;
+        margin-bottom: 12.25vh;
+        .container {
+            .bannerCol {
+                h2 {
+                    font-size: 1.2rem;
+                }
+                span, button{
+                    font-size: 1rem;
+                }
+            }
+            .text {
+                top: 5vh;
+
+                span:nth-last-child(2){
+                    margin: 1rem 0 1rem 0;
+                }
+            }
+            .image{
+                top: 3vh;
+                img {
+                    width: 50%;
+                }
+            } 
+        }
+    }
+
+    .marquee {
+        span{
+            font-size: 4.5vw;
+        }
+    }
+}
+    

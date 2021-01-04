@@ -1,0 +1,313 @@
+@import "../../sass-global.scss";
+
+.homepage-banner {
+
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    .container {
+        height:inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 90%;
+        padding:0;
+        margin-top:3vh;
+        .row {
+            width:inherit;
+            height:80%;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 5vh;
+
+            .image {
+                justify-self:flex-end;
+            }
+        }
+        
+    }
+
+    .bannerCol {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding:0;
+        margin:0;
+        height: inherit;
+        h2 {
+            // color: #E11F2F;
+            font-weight: bolder;
+        }
+        img {
+            position: absolute;
+            width: 100%;
+        }
+    }
+
+    .text {
+        flex-shrink: 0;
+        margin: 30px 0;
+        span {
+            margin: 10px 0;
+        }
+        .reforming-education-network {
+            color: $defaultFontColorLight;
+            font-size: 1.2rem;
+            margin: 0 0 3vh 0;
+        }
+        button {
+            font-size:1.2rem;
+        }
+    }
+
+    .slide1{
+        animation: fade1 7s 2s infinite;
+        -webkit-animation: fade1 7s 2s infinite;
+    }
+    .slide2{
+        opacity: 0;
+        animation: fade2 7s 2s infinite;
+        -webkit-animation: fade2 7s 2s infinite;
+    }
+    .slide3{
+        opacity: 0;
+        animation: fade3 7s 2s infinite;
+        -webkit-animation: fade3 7s 2s infinite;
+    }
+    .slide4{
+        opacity: 0;
+        animation: fade4 7s 2s infinite;
+        -webkit-animation: fade4 7s 2s infinite;
+    }
+}
+
+.textSlideContainer {
+    position: relative;
+    height: 35px;
+    overflow: hidden;
+}
+
+.homepage-banner .bannerCol .textSlider {
+    animation: SlideTheText 7s 2s infinite;
+    -webkit-animation: SlideTheText 7s 2s infinite;
+    h2 {
+        color: $themeRed;
+    }
+}
+
+@keyframes ChangeTextColor1 {
+    0%, 10% {
+        color: $themeRed;
+    }
+    30%, 45% {
+        color: $defaultFontColorDark;
+    }
+    60%, 75% {
+        color: $defaultFontColorDark;
+    }
+    90%, 100% {
+        color: $defaultFontColorDark;
+    }
+}
+
+@keyframes ChangeTextColor2 {
+    0%, 10% {
+        color: $defaultFontColorDark;
+    }
+    30%, 45% {
+        color: $themeRed;
+    }
+    60%, 75% {
+        color: $defaultFontColorDark;
+    }
+    90%, 100% {
+        color: $defaultFontColorDark;
+    }
+}
+
+@keyframes ChangeTextColor4 {
+    0%, 10% {
+        color: $defaultFontColorDark;
+    }
+    30%, 45% {
+        color: $defaultFontColorDark;
+    }
+    60%, 75% {
+        color: $defaultFontColorDark;
+    }
+    90%, 100% {
+        color: $themeRed;
+    }
+}
+
+
+@keyframes ChangeTextColor3 {
+    0%, 10% {
+        color: $defaultFontColorDark;
+    }
+    30%, 45% {
+        color: $defaultFontColorDark;
+    }
+    60%, 75% {
+        color: $themeRed;
+    }
+    90%, 100% {
+        color: $defaultFontColorDark;
+    }
+}
+
+
+@keyframes SlideTheText {
+    0%, 10% {
+        transform: translateY(0)    ;
+        -webkit-transform: translateY(0)    ;
+        -moz-transform: translateY(0)    ;
+        -ms-transform: translateY(0)    ;
+        -o-transform: translateY(0)    ;
+    }
+    30%, 45% {
+        transform: translateY(-27%)    ;
+        -webkit-transform: translateY(-27%)    ;
+        -moz-transform: translateY(-27%)    ;
+        -ms-transform: translateY(-27%)    ;
+        -o-transform: translateY(-27%)    ;
+}
+    60%, 75% {
+        transform: translateY(-54%)    ;
+        -webkit-transform: translateY(-54%)    ;
+        -moz-transform: translateY(-54%)    ;
+        -ms-transform: translateY(-54%)    ;
+        -o-transform: translateY(-54%)    ;
+}
+    90%, 100% {
+        transform: translateY(-78.5%)    ;
+        -webkit-transform: translateY(-78.5%)    ;
+        -moz-transform: translateY(-78.5%)    ;
+        -ms-transform: translateY(-78.5%)    ;
+        -o-transform: translateY(-78.5%)    ;
+}
+}
+
+
+@keyframes fade1 {
+    0%, 10% {
+       opacity:1;
+    }
+    30%, 45% {
+       opacity:0;
+    }
+    60%, 75% {
+        opacity:0;
+    }
+    90%, 100%{
+        opacity:0;
+    }
+}
+
+@keyframes fade2 {
+    0%, 10% {
+        opacity:0;
+     }
+     30%, 45% {
+        opacity:1;
+     }
+     60%, 75% {
+         opacity:0;
+     }
+     90%, 100%{
+         opacity:0;
+     }
+    }
+
+@keyframes fade3 {
+    0%, 10% {
+        opacity:0;
+     }
+     30%, 45% {
+        opacity:0;
+     }
+     60%, 75% {
+         opacity:1;
+     }
+     90%, 100%{
+         opacity:0;
+     }
+}
+
+@keyframes fade4 {
+    0%, 10% {
+        opacity:0;
+     }
+     30%, 45% {
+        opacity:0;
+     }
+     60%, 75% {
+         opacity:0;
+     }
+     90%, 100%{
+         opacity:1;
+     }
+}
+
+
+
+
+@media only screen and (max-width: 767px){
+    .homepage-banner {
+        // .row {
+        //     flex-direction: column;
+        // }
+        .text {
+            top: 7%;
+            align-items: center;
+            h2{
+                text-align: center;
+            }
+            button {
+                margin: 20px auto 0 auto;
+            }
+            .span {
+                font-size: 5vw;
+            }
+        }
+        .image {
+            top: 5%;
+            justify-content: flex-start;
+            align-items: center;
+            height:10%;
+        }
+        .slide2 {
+            width: 100%;
+        }
+    }
+}
+.flex-spacer-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 480px){
+    
+    .homepage-banner {
+        .container {
+            padding-bottom: 8vh;
+        }
+        .text {
+            position: relative;
+            top: 5vh;
+            .flex-spacer-mobile {
+                display: flex;
+                flex: 1.5;
+            }
+            .reforming-education-network {
+                top: 5vh;
+                font-size: 4vw;
+                margin-bottom: 0.5rem;
+            }
+            .changing {
+                font-size:5vw;
+            }
+            // justify-content: center;
+        }
+    }
+}

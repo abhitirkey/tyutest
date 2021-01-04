@@ -1,0 +1,40 @@
+.companies {
+    text-align: center;
+    padding-bottom: 8vh;
+    img {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:767px){
+    .companies img {
+        width: 90%;
+    }
+}
+
+// .companies {
+//     padding: 0 10% 35px 10%;
+//     .companiesGrid {
+//         display: grid;
+//         grid-template-columns: repeat(auto-fit, 9rem);
+//         grid-gap: 2em 0;
+//         justify-content: center;
+//         div{
+//             text-align:center;
+//             width: 100%;
+//             height:2rem;
+//             img {
+//                 height:100%;
+//             }
+//         }
+//     }
+    
+//     .more_companies {
+//         margin-top: 2em;
+//         text-align: center;
+//         height:2em;
+//         img {
+//             height: 100%;
+//         }
+//     }
+// }

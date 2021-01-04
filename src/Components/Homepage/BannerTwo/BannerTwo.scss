@@ -1,0 +1,148 @@
+@import '../../sass-global.scss';
+
+.banner-two {
+    background: #FAF5F6;
+    .container {
+        max-width: 90%;
+        padding: 0;
+    }
+}
+
+.banner2textCol {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-end;
+    p {
+        margin: 10px 0; 
+        text-align: right;
+        font-size: 1.5rem;
+        span {
+            display: block;
+            margin: 5px 0;
+            color: $themePink;
+        }
+    }
+}
+
+.imageStack {
+    position: relative;
+    overflow: hidden;
+    .macPNG {
+        position:relative;
+        width: 90%;
+        z-index: 999;
+        margin-top:10%;
+        right:0;
+    }
+    .macImageSlider{
+        position:relative;
+        top: 20%;
+        left: 4%;
+        display:flex;
+        flex-shrink: 0;
+        flex-wrap: nowrap;
+        z-index: 99;
+        img{
+            position: absolute;
+            top:10%;
+            left:0;
+            display:inline-block;
+            width: 83%;
+        }
+        .slide1{
+            animation:slideImage1 10s infinite;
+            -webkit-animation:slideImage1 10s infinite;
+}
+        .slide2{
+            animation:slideImage2 10s infinite;
+            -webkit-animation:slideImage2 10s infinite;
+}
+        .slide3{
+            animation:slideImage3 10s infinite;
+            -webkit-animation:slideImage3 10s infinite;
+}
+        .slide4{
+            animation:slideImage4 10s infinite;
+            -webkit-animation:slideImage4 10s infinite;
+}
+    }
+}
+
+@keyframes slideImage1 {
+    0%, 15% {
+        opacity:1;
+    }
+    30%, 45% {
+        opacity:0;
+    }
+    60%, 75% {
+        opacity:0;
+    }
+    90%, 100% {
+        opacity:0;
+    }
+}
+@keyframes slideImage2 {
+    0%, 15% {
+        opacity:0;
+    }
+    30%, 45% {
+        opacity:1;
+    }
+    60%, 75% {
+        opacity:0;
+    }
+    90%, 100% {
+        opacity:0;
+    }
+}
+@keyframes slideImage3 {
+    0%, 15% {
+        opacity:0;
+    }
+    30%, 45% {
+        opacity:0;
+    }
+    60%, 75% {
+        opacity:1;
+    }
+    90%, 100% {
+        opacity:0;
+    }
+}
+@keyframes slideImage4 {
+    0%, 15% {
+        opacity:0;
+    }
+    30%, 45% {
+        opacity:0;
+    }
+    60%, 75% {
+        opacity:0;
+    }
+    90%, 100% {
+        opacity:1;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .banner-two .imageStack {
+        .macPNG {
+            width: 100%;
+        }
+        .macImageSlider{
+            top: 19%;
+            img {
+                width: 92%;
+            }
+        }
+    }
+
+    .banner2textCol {
+        align-items: center;
+        p {
+            text-align: center;
+        }
+    }
+}

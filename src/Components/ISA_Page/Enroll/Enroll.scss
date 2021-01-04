@@ -1,0 +1,84 @@
+@import "../../sass-global.scss";
+
+.enroll {
+
+    background: #FAF5F6;
+    padding: 20px 10% 0 10%;
+
+    text-align: center;
+    
+    .enroll-card-container {
+        // margin: 0 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .enroll-Card {
+            position: relative;
+            border: 2px solid $themePink;
+            flex-basis: 45%;
+            margin: 35px 0;
+            padding: 20px 10px;
+
+            h4 {
+                margin-bottom: 30px;
+            }
+
+            .card-number {
+                position: absolute;
+                top: -35px;
+                left: -35px;
+                background-color: #FAF5F6;
+                color: #e2e2e2;
+                padding: 15px;
+                font-weight: bolder;
+                border-radius: 50%            ;
+                -webkit-border-radius: 50%            ;
+                -moz-border-radius: 50%            ;
+                -ms-border-radius: 50%            ;
+                -o-border-radius: 50%            ;
+}
+        }
+    }
+}
+
+@media only screen and (max-width: 929px) {
+
+    .enroll .enroll-card-container {
+        margin: 0;
+        .enroll-Card {
+            flex-basis: 100%;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+
+    .enroll .enroll-card-container .enroll-Card {
+        .card-number {
+            font-size: 30px;
+            padding: 20px;
+            top: -35px;
+            left: -35px;
+        }
+    }   
+}
+
+@media only screen and (max-width: 487px) {
+
+    .enroll .enroll-card-container .enroll-Card {
+        .card-number {
+            padding: 10px;
+            top: -25px;
+            left: -25px;
+        }
+    }   
+}
+
+@media only screen and (min-width:347px) and (max-width: 373px){
+    .enroll .enroll-card-container .enroll-Card .card-number {
+        padding: 2vw 2vw;
+    }
+}
+

@@ -1,0 +1,203 @@
+@import "../../sass-global.scss";
+
+.journey-grid {
+    margin: 4vh 0 1.5rem 0;   
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(4fr, 2fr));
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    // grid-template-areas: 
+    //     "Row1 Row1 Row1 Row1"
+    //     "Row2 Row2 Row2 Row2";
+    .journey-step {
+        &:nth-child(1), &:nth-child(2) {
+            .icon {
+                padding-left: 15px;
+            }
+            
+        }
+        &:nth-child(3) {
+            .icon {
+                img {
+                    width: 40px;
+                }
+            }
+            .highlightedIcon img {
+                width: 45px;
+            }
+        }
+
+        margin-bottom: 2.5rem;
+    }
+    
+    // .step-0{
+    //     grid-row: 1 / 2;
+    //     grid-column: 1 / 4;
+    // }
+    // .step-1{
+    //     grid-row: 1 / 2;
+    //     grid-column: 2 / 4;
+    // }
+    // .step-2{
+    //     grid-row: 1 / 2;
+    //     grid-column: 3 / 4;
+    // }
+    // .step-3{
+    //     grid-row: 1 / 2;
+    //     grid-column: 4 / 4;
+    // }
+    // .step-4{
+    //     grid-row: 2 / 2;
+    //     grid-column: 1 / 4;
+    // }
+    // .step-5{
+    //     grid-row: 2 / 2;
+    //     grid-column: 2 / 4;
+    // }
+    // .step-6{
+    //     grid-row: 2 / 2;
+    //     grid-column: 3 / 4;
+    // }
+    // .step-7{
+    //     grid-row: 2 / 2;
+    //     grid-column: 4 / 4;
+    // }
+
+}
+
+.dotted-box{
+    border-color:rgb(212, 212, 212);
+    border-style: dashed dashed;
+}
+
+.desktop {
+    position: relative;
+    top: -22.5rem;
+    left: 12%;
+    margin-right: 24%;
+    margin-bottom: -20rem;
+
+    .one {
+        border-width: 2px 2px 2px 0;
+        height: 4.6rem;
+    }
+    .two {
+        border-width: 0 0 0 2px;
+        height: 5.5rem;
+    }
+    .three {
+        border-width: 0 0 2px 0;
+        height: 5.5rem;
+    }
+}
+
+.dotted-line-container {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    z-index: 50;
+}
+
+.mobile {
+    display: none;
+    position: relative;
+    top: -53.5rem;
+    left: 18.75vw;
+    margin-right: 37vw;
+    margin-bottom: -52.5rem;
+
+    .one {
+        border-width: 2px 2px 2px 0;
+        height: 4.6rem;
+    }
+    .two {
+        border-width: 0 0 0 2px;
+        height: 5.5rem;
+    }
+    .three {
+        border-width: 0 0 2px 0;
+        height: 5.5rem;
+    }
+    .four {
+        border-width: 0 2px 2px 0;
+        height: 4.6rem;
+    }
+    .five {
+        border-width: 0 0 0 2px;
+        height: 5.5rem;
+    }
+    .six {
+        border-width: 0 0 2px 0;
+        height: 5.5rem;
+    }
+    .seven {
+        border-width: 0 2px 2px 0;
+        height: 4.6rem;
+    }
+    .eight {
+        border-width: 0 0 0 2px;
+        height: 5.5rem;
+    }
+    .nine {
+        border-width: 0 0 2px 0;
+        height: 5.5rem;
+    }
+}
+
+.mobile-small {
+    display: none;
+    position: relative;
+    top: -115rem;
+    left: 39.5vw;
+    margin-right: 45%;
+    margin-bottom: -105rem;
+
+    .one {
+        border-width: 0 0 0 2px;
+        height: 100rem;
+    }
+}
+
+@media only screen and (max-width: 819px){
+    .journey-header {
+        text-align:center;
+    }
+
+    .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+        // grid-template-areas: 
+        // "Row1 Row1"
+        // "Row2 Row2"
+        // "Row3 Row3"
+        // "Row4 Row4";
+    }
+    .desktop {
+        display:none;
+    }
+    .mobile {
+        display:flex;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .AllSections .section-journey {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 391px){
+    .desktop {
+        display:none;
+    }
+    .mobile {
+        display:none;
+    }
+    .mobile-small{
+        display:block;
+    }
+    .journey-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

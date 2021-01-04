@@ -1,0 +1,43 @@
+@import "../../sass-global.scss";
+
+.mentoring {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    padding-bottom: 50px !important;
+    h4 {
+        text-align: center;
+    }
+    .mentorCol {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+
+
+        a {
+            text-align:center;
+        }
+
+        .linkedinPNG {
+            position: absolute;
+            width: 25%;
+            left: 37%;
+            top: 17%;
+            opacity: 0.5;
+            visibility: hidden;
+        }
+
+        img {
+            margin: 40px 0;
+            width: 65%;
+            border-radius: 50%;        ;
+            -webkit-border-radius: 50%        ;
+            -moz-border-radius: 50%        ;
+            -ms-border-radius: 50%        ;
+            -o-border-radius: 50%        ;
+        }
+    }
+}

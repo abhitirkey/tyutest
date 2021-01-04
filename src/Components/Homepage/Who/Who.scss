@@ -1,0 +1,71 @@
+@import "../../sass-global.scss";
+
+.who {
+    padding: 1.5rem 5% 0 5%;
+    h2, h4 {
+        text-align: center;
+        span {
+            color: $themePink;
+        }
+    }
+    .container {
+        .secondRow {
+            margin-top: 1rem;
+        }
+        .thirdRow {
+            margin-top: 3rem;
+        }
+        .row {
+            .WhoCol {
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
+                align-items:center;
+                .whoTextFlex {
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                }
+                span {
+                    font-size: clamp(1rem, 1.75vw, 1.5rem);
+                }
+                img {
+                    width: 100%;
+                }
+                .lastImage {
+                    width: 80%;
+                }
+                
+
+                button, > .grayLink {
+                    font-size: clamp(1rem, 1.5vw, 1.2rem);
+                    margin-top: 20px;
+                    color: #888888;
+                    border-width: 1px;
+                    opacity: 1;
+                    transition: all 0.5s ease;
+                    -webkit-transition: all 0.5s ease;
+                    -moz-transition: all 0.5s ease;
+                    -ms-transition: all 0.5s ease;
+                    -o-transition: all 0.5s ease;
+                    
+                    &:hover{
+                        color: white;
+                        background: $gradientBackground;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .who .container {
+        .secondRow {
+            margin-top: -5rem;
+        }
+    }
+    .who {
+        padding-bottom: 0;
+    }
+}

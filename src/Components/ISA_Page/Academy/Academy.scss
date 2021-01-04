@@ -1,0 +1,86 @@
+@import "../../sass-global.scss";
+
+.academy-container {
+    margin-top: 50px;
+}
+.academy-title {
+    font-weight: bolder;
+}
+
+
+.rupee101 {
+    position: relative;
+    top: 7px;
+    font-size: 0.9em;
+    vertical-align: top;
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // padding-left: 12.5vw;
+    .statsCol {
+        flex: 1;
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        text-align: left;
+        background-color:rgb(248, 248, 248);
+        margin: 3px;
+        padding: 5px 5px 5px 10px;
+        h1 {
+            align-self:flex-start;
+            color: $themePink;
+        }
+        padding-bottom: 10px;
+    }
+}
+
+.complementary_access {
+    color: $themePink;
+}
+
+// Stats Grid for tablet and lower
+@media only screen and (max-width:991px){
+    .statsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width:768px){
+    .rupee101 {
+        top: 1.2vw;
+    }
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        h1 {
+            font-weight: bolder;
+            font-size: 8vw;
+        }
+        span {
+            font-size:3vw;
+        }
+    }
+
+    .complementary_access {
+        font-size: 3vw;
+    }
+    
+}
+
+
+.image-container {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px){
+    .academy-title {
+        text-align: center;
+    }
+    .image-container {
+      margin-bottom: 30px;
+    }
+}
