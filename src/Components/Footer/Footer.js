@@ -21,11 +21,11 @@ function Footer() {
                 <div className="space-div"></div>
                 <div className="footer-col right">
                     <div className="links-cluster">
-                        <a href='/coming-soon' target="_blank" rel="noreferrer">About us</a>
-                        <a href='/coming-soon' target="_blank" rel="noreferrer">Become a mentor</a>
-                        <a href="/coming-soon" target="_blank" rel="noreferrer">Income Share Agreement</a>
-                        <a href="/contact-us" target="_blank" rel="noreferrer">Contact Us</a>
-                        <a href="/coming-soon" target="_blank" rel="noreferrer">Careers</a>
+                        <Link to='/'>About us</Link>
+                        <Link to='/coming-soon'>Become a mentor</Link>
+                        <Link to="/coming-soon">Income Share Agreement</Link>
+                        <Link to="/contact-us">Contact Us</Link>
+                        <Link to="/coming-soon">Careers</Link>
                     </div>
                 </div>
             </div>
@@ -41,9 +41,9 @@ function Footer() {
                 </div>
                 <div className="space-div"></div>
                 <div className="footer-col right">
-                        <a href="/coming-soon" target="_blank" rel="noreferrer">Blog</a> | 
-                        <a href="/privacy-policy" target="_blank" rel="noreferrer"> Privacy Policy</a> | 
-                        <a href="/terms-of-use" target="_blank" rel="noreferrer"> Terms of Use</a> 
+                        <Link to="/coming-soon">Blog</Link> | 
+                        <Link to="/privacy-policy"> Privacy Policy</Link> | 
+                        <Link to="/terms-of-use"> Terms of Use</Link> 
                 </div>
                    
             </div>

@@ -31,7 +31,7 @@ export class HomeBanner extends Component {
                             </div>
                             <div className="flex-spacer"></div>
                             <span className="boldText reforming-education-network">Reforming. Education. Network.</span>
-                            <Link to='/contact-us' target="_blank"><button className="theme-btn">Request a Demo</button></Link>                            
+                            <Link to='/contact-us'><button className="theme-btn">Request a Demo</button></Link>                            
                         </Col>
                         <Col className="bannerCol image" sm={{span: 12, order:1}} xs={{ span: 12, order: 1}} md={{ span: 7, order: 1}} lg={{ span: 7, order: 1}}>
                             {/* <div className="imageSlider"> */}

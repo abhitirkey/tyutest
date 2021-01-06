@@ -44,7 +44,7 @@
         ::placeholder {
             color: rgb(150, 150, 150);
         }
-        input[type=text], textarea {
+        input, textarea {
             padding: 5px;
             border: 1px solid $themePinkLight;
             border-radius: 5px;
@@ -56,6 +56,12 @@
             &:focus {
                 outline: none;
             }
+        }
+        .OK {
+            border-color: $themePinkLight;
+        }
+        .notOK {
+            border-color: $themeRed;
         }
          
         button {

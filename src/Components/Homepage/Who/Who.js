@@ -29,7 +29,7 @@ function Who() {
                 <Row className="secondRow">
                     <Col className="WhoCol" xs={{span:12, order:2}} sm={{span:12, order:2}} md={{span:6, order: 1}} lg={{span:6, order: 1}}>
                         <span style={{marginTop: '5vw'}}>Find your upskilling course</span>
-                        <Link to="/isa" target="_blank"><button className="theme-hollow-btn">Click Here</button></Link>
+                        <Link to="/isa"><button className="theme-hollow-btn">Click Here</button></Link>
                     </Col>
                     <Col className="WhoCol" xs={{span:12, order:1}} sm={{span:12, order: 1}} md={{span:6, order: 2}} lg={{span:6, order: 2}}>
                         <img src={CoursesGIF} alt="Courses"/>
