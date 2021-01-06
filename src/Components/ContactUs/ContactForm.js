@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 // import Alert from 'react-bootstrap/Alert'
 // import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
+import Modal from 'react-bootstrap/Modal'
 import axios from 'axios'
 
 export default class ContactForm extends Component {
@@ -11,7 +13,15 @@ export default class ContactForm extends Component {
         phone: '',
         subject: '',
         message: '',
-        submitDisabled: false
+        emailValid: true,
+        nameValid: true,
+        phoneValid: true,
+        submitDisabled: false,
+        formOK: true,
+        formModalShow: false,
+        FormModalTitle: 'Hang in there...',
+        FormModalBody: 'Please wait while we send your message...',
+        formDataSent: false
     }
 
     fieldChangeHandler = async ({ target }) => {
@@ -21,47 +31,132 @@ export default class ContactForm extends Component {
         await this.setState({
             [name] : value
         });
+
+        switch(name){
+            case 'name':
+                if(value === ''){
+                    await this.setState({ nameValid: false});
+                }
+                else{
+                    await this.setState({ nameValid: true })
+                }
+                break;
+            case 'phone':
+                const phone_regX = new RegExp(/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/);
+                
+                if(phone_regX.test(value)){
+                    await this.setState({ phoneValid: true });
+                }
+                else{
+                    await this.setState({ phoneValid: false });
+                }
+                break;
+            case 'email':
+                const email_regX = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+                
+                if(email_regX.test(value)){
+                    await this.setState({
+                        emailValid: true
+                    })
+                }
+                else {
+                    await this.setState({
+                        emailValid: false
+                    })
+                    break;
+                }        
+        }
+
+        if(this.state.nameValid && this.state.emailValid && this.state.phoneValid)
+            this.setState({ formOK: true});
     }
 
-    submitHandler = (e) => {
-        const API_PATH = 'https://194.59.164.43/contact-mail/index.php';
+    submitHandler = async (e) => {
+        
         e.preventDefault();
-        axios({
-            method: 'post',
-            url: `${API_PATH}`,
-            headers: { 'content-type': 'application/json' },
-            data: this.state
-        })
+
+        if(this.state.name === '')
+            await this.setState({ nameValid : false , formOK: false });
+        if(this.state.email === '')
+            await this.setState({ emailValid : false, formOK: false  });
+        if(this.state.phone === '')
+            await this.setState({ phoneValid : false , formOK: false });
+        
+        if(this.state.formOK) {
+
+            await this.setState({ formModalShow : true });
+
+            const API_PATH = 'https://tyutee.com/contact-mail/index.php';
+
+            axios({
+                method: 'post',
+                url: `${API_PATH}`,
+                headers: { 'content-type': 'application/json' },
+                data: this.state
+            })
             .then(result => {
                 console.log(result.data);
+                if(result.data.sent){
+                    this.setState({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        subject: '',
+                        message: '',
+                        formDataSent: true,
+                        FormModalTitle: 'Success!',
+                        FormModalBody: 'Thank you for contacting us. We will get back to you shortly.'
+                    });
+                }
+                else {
+                    this.setState({
+                        formDataSent: true,
+                        FormModalTitle: 'Sorry!',
+                        FormModalBody: 'We are encountering server issues at this time. Please try again or come back to us later.'
+                    })
+                }
             })
             .catch(error => console.log(error));
+        }
     }
+
+    handleClose = () => this.setState({ formModalShow : false })
 
     render() {
 
         return (
+            <>
             <div className="contact-form-container">
                 <form onSubmit={this.submitHandler} className="form-elements">
-                        <input type="text" name="name" placeholder="Name*" onChange={this.fieldChangeHandler} value={this.state.name}/>
                         <div style={{display:'flex', flexDirection: 'column'}}>
-                            {/* {emailSpan} */}
-                            <input className={this.emailClass} type="email" name="email" placeholder="Email*" onChange={this.fieldChangeHandler} value={this.state.email}/>
+                            <input type="text" className={!this.state.nameValid ? 'is-invalid form-control': ''} name="name" placeholder="Name*" onChange={this.fieldChangeHandler} value={this.state.name}/>
+                            {!this.state.nameValid? <span className="span-invalid">This field is mandatory.</span>: ''}
                         </div>
-                        <input type="text" name="phone" placeholder="Phone Number" onChange={this.fieldChangeHandler} value={this.state.phone}/>
+                        <div style={{display:'flex', flexDirection: 'column'}}>
+                            <input className={!this.state.emailValid ? 'is-invalid form-control' : ''} type="email" name="email" placeholder="Email*" onChange={this.fieldChangeHandler} value={this.state.email}/>
+                            {!this.state.emailValid? <span className="span-invalid">Please enter a valid email address</span>: ''}
+                        </div>
+                        <div style={{display:'flex', flexDirection: 'column'}}>
+                            <input className={!this.state.phoneValid ? 'is-invalid form-control' : 'form-control'} type="text" name="phone" placeholder="Phone Number" onChange={this.fieldChangeHandler} value={this.state.phone}/>
+                            {!this.state.phoneValid? <span className="span-invalid">Please enter a valid phone number</span>: ''}
+                        </div>
                         <input type="text" name="subject" placeholder="Subject" onChange={this.fieldChangeHandler} value={this.state.subject}/>
                         <textarea name="message" placeholder="Message*" rows="7" onChange={this.fieldChangeHandler} value={this.state.message}/>
-                        {/* <Alert show={this.state.alertShow} variant={this.state.alertType}>
-                            <Alert.Heading>How's it going?!</Alert.Heading>
-                            <p>{this.state.alertMessage}</p>
-                            <hr />
-                            <div className="d-flex justify-content-end">
-                            {this.state.alertType !== 'success' && <Button onClick={() => this.setState({alertShow: false})}>Close</Button>}
-                            </div>
-                        </Alert> */}
                         <button className="theme-btn" disabled={this.state.submitDisabled}>Submit</button>
                 </form>
             </div>
+            <Modal show={this.state.formModalShow} onHide={this.handleClose}>
+                <Modal.Header closeButton>
+                <Modal.Title>{this.state.FormModalTitle}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>{this.state.FormModalBody}</Modal.Body>
+                <Modal.Footer>
+                {this.state.formDataSent ? <Button variant="secondary" onClick={this.handleClose}>
+                    Close
+                </Button>: ''}
+                </Modal.Footer>
+            </Modal>
+            </>
         );
     }
 }

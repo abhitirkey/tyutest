@@ -57,11 +57,10 @@
                 outline: none;
             }
         }
-        .OK {
-            border-color: $themePinkLight;
-        }
-        .notOK {
-            border-color: $themeRed;
+
+        .span-invalid {
+            color: $themeRed;
+            font-size: 0.8rem;
         }
          
         button {
