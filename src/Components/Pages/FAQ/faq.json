@@ -1,0 +1,42 @@
+[
+    {
+        "type": "isa",
+        "question": "What is ISA (Income Share Agreement) ?",
+        "answer": "<p>With ISA, you can enroll in our course by paying absolutely nothing but once you are placed, you agree to pay us back 15% of monthly salary per month for 3 years, only in the months you are earning an annual package of 5LPA. Also, if you do not get a job of 5LPA within 1 years of completing the course, the ISA expires. It is capped at 1Lakh for final year students and 2 lakhs for pre final year students. If you are fired or leave your first job within 3 months of joining the payment will get paused until you get a new job. If you complete 3 months in your first job with min guaranteed CTC, you have to pay the entire amount irrespective of your employment status after that.</p>"
+    },
+    {
+        "type": "isa",
+        "question": "How much % of Salary should I pay and for what duration ?",
+        "answer": "<p><strong>Final Year Students :</strong> 15% of the monthly income for 3 years until you pay Rs.1 lakh + GST in total in the months where your salary is more than 5LPA. The maximum total payment in any scenario is 1 Lakh + GST.</p><p><strong>Pre Final Year Students :</strong> 15% of the monthly income for 3 years until you pay Rs.2 lakhs + GST in total in the months where your salary is more than 5LPA. The maximum total payment in any scenario is 2 Lakhs + GST.</p>"
+    },
+    {
+        "type": "isa",
+        "question": "When does the ISA Repayment start ?",
+        "answer": "<p><strong>Final Year Students :</strong> It will come into force once you get placed with a more than 5LPA job within 1yrs after completion of the course and post you joining the firm for your work.</p><p><strong>Pre Final Year Students :</strong> It will come into force once you get placed with a more than 5LPA job within 2yrs after completion of the course and post you joining the firm for your work.</p>"
+    },
+    {
+        "type": "isa",
+        "question": "What happens if I don't get a job with a CTC of Rs 5 lakh ?",
+        "answer": "<p>In the rare event that you don't get a job with a CTC of Rs 5 Lakh, your repayment will not start. Your repayment will only start if you get a job > 5 LPA within 1 or 2 years of completing the course depending on your category.</p>"
+    },
+    {
+        "type": "isa",
+        "question": "What if I am laid off or quit my job in between ?",
+        "answer": "<p>In the unfortunate scenario of a lay off or if you voluntarily leave your first job within 6 months of joining the firm, the payment will get paused until you get a new job. If you complete 6 months in your first job with min guaranteed CTC, you have to pay the entire amount irrespective of your employment status after that.</p>"
+    },
+    {
+        "type": "isa",
+        "question": "What if I quit my job for Higher education ?",
+        "answer": "<p>As this would be a special case scenario, we would be deciding on the right way of approach to proceed with it on the basis of the risk analysis of your candidature. You would either have an option to clear of the entire due amount at one go or we could set up a payment plan for you as well.</p>"
+    },
+    {
+        "type": "isa",
+        "question": "How is the monthly amount to be paid on an ISA Calculated ?",
+        "answer": "<p>The monthly amount to be paid towards the ISA would be calculated on the basis of 15% of your Net Monthly Salary before taxes and cash component deductions.</p>"
+    },
+    {
+        "type": "isa",
+        "question": "Do I get assistance on the right career path ?",
+        "answer": "Once you are enrolled as a student with us, you get a lifetime complimentary access to Career Counsellors from our end who would assist you with deciding on a proper career path for you based on what your goals are."
+    }
+]

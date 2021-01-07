@@ -5,6 +5,8 @@ import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 import axios from 'axios'
 
+import SentMailPNG from './SentMail.png'
+
 export default class ContactForm extends Component {
 
     state = {
@@ -21,7 +23,8 @@ export default class ContactForm extends Component {
         formModalShow: false,
         FormModalTitle: 'Hang in there...',
         FormModalBody: 'Please wait while we send your message...',
-        formDataSent: false
+        formDataSent: false,
+        emailSuccess: false
     }
 
     fieldChangeHandler = async ({ target }) => {
@@ -63,8 +66,9 @@ export default class ContactForm extends Component {
                     await this.setState({
                         emailValid: false
                     })
-                    break;
-                }        
+                   
+                }
+                break;        
         }
 
         if(this.state.nameValid && this.state.emailValid && this.state.phoneValid)
@@ -104,13 +108,16 @@ export default class ContactForm extends Component {
                         subject: '',
                         message: '',
                         formDataSent: true,
-                        FormModalTitle: 'Success!',
-                        FormModalBody: 'Thank you for contacting us. We will get back to you shortly.'
+                        emailSuccess: true,
+                        FormModalTitle: 'Thanks for reaching out!',
+                        FormModalBody: 'We will get back to you shortly.',
+                        formOK: false
                     });
                 }
                 else {
                     this.setState({
                         formDataSent: true,
+                        emailSuccess: false,
                         FormModalTitle: 'Sorry!',
                         FormModalBody: 'We are encountering server issues at this time. Please try again or come back to us later.'
                     })
@@ -118,11 +125,28 @@ export default class ContactForm extends Component {
             })
             .catch(error => console.log(error));
         }
+        else {
+            alert("Please make sure all required fields are filled.");
+        }
     }
 
-    handleClose = () => this.setState({ formModalShow : false })
+    handleClose = () => {
+        this.setState({ 
+            formModalShow : false,
+            FormModalTitle: 'Hang in there...',
+            FormModalBody: 'Please wait while we send your message...',
+            formDataSent: false 
+        });
+    }
 
     render() {
+        let ModalStyle = {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            color: '#797979'
+        };
 
         return (
             <>
@@ -137,25 +161,27 @@ export default class ContactForm extends Component {
                             {!this.state.emailValid? <span className="span-invalid">Please enter a valid email address</span>: ''}
                         </div>
                         <div style={{display:'flex', flexDirection: 'column'}}>
-                            <input className={!this.state.phoneValid ? 'is-invalid form-control' : 'form-control'} type="text" name="phone" placeholder="Phone Number" onChange={this.fieldChangeHandler} value={this.state.phone}/>
+                            <input className={!this.state.phoneValid ? 'is-invalid form-control' : 'form-control'} type="text" name="phone" placeholder="Phone Number*" onChange={this.fieldChangeHandler} value={this.state.phone}/>
                             {!this.state.phoneValid? <span className="span-invalid">Please enter a valid phone number</span>: ''}
                         </div>
                         <input type="text" name="subject" placeholder="Subject" onChange={this.fieldChangeHandler} value={this.state.subject}/>
-                        <textarea name="message" placeholder="Message*" rows="7" onChange={this.fieldChangeHandler} value={this.state.message}/>
+                        <textarea name="message" placeholder="Message" rows="7" onChange={this.fieldChangeHandler} value={this.state.message}/>
                         <button className="theme-btn" disabled={this.state.submitDisabled}>Submit</button>
                 </form>
             </div>
             <Modal show={this.state.formModalShow} onHide={this.handleClose}>
-                <Modal.Header closeButton>
-                <Modal.Title>{this.state.FormModalTitle}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>{this.state.FormModalBody}</Modal.Body>
+                <Modal.Body style={ModalStyle}>
+                        {this.state.emailSuccess ? <img style={{width: '20%'}} src={SentMailPNG} alt="SentMailPNG" /> : ''}
+                        <h2>{this.state.FormModalTitle}</h2>
+                        <span>{this.state.FormModalBody}</span>
+                </Modal.Body>
                 <Modal.Footer>
-                {this.state.formDataSent ? <Button variant="secondary" onClick={this.handleClose}>
+                {this.state.formDataSent ? <button className="theme-hollow-btn grayed" onClick={this.handleClose}>
                     Close
-                </Button>: ''}
+                </button>: ''}
                 </Modal.Footer>
             </Modal>
+             
             </>
         );
     }

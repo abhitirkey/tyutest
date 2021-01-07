@@ -8,6 +8,15 @@ a {
     color: $defaultFontColor;
 }
 
+::-moz-selection{
+	color: #fff;
+    background: $themePink;
+}
+::selection{
+	color: #fff;
+    background: $themePink;
+}
+
 .AppContainer nav {
     padding: 0 5%;
 }
@@ -107,6 +116,22 @@ a {
     border-color: $defaultFontColorDark;
 }
 
+form {
+    width: 80%;
+    .span-invalid {
+        color: $themeRed;
+        font-size: 0.8rem;
+    }
+    .field__div {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+    ::placeholder {
+        color: rgb(150, 150, 150);
+    }
+}
+
 @media (max-width: 868px){
     .AppContainer > nav {
         padding: 0 5%;
@@ -126,5 +151,11 @@ a {
 
     .section-title {
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .supertext {
+        font-size: 50%; 
     }
 }

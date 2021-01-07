@@ -42,7 +42,7 @@ class Header extends React.Component {
                         <Link className="navlink" to='/coming-soon'><li>Courses</li></Link>
                         <Link className="navlink" to='/coming-soon'><li>Hire From Us</li></Link>
                         <Link className="navlink" to='/coming-soon'><li>Fees & ISA</li></Link>
-                        <Link className="navlink" to='/coming-soon'><li>FAQ</li></Link>
+                        <Link className="navlink" to='/faq'><li>FAQ</li></Link>
                         <li><a href="https://login.tyutee.com" target="_blank" rel="noreferrer" className="login-btn themeLink">Login</a></li>
                     </ul>
                     <div className="menuIcon" onClick={this.showNav}><FaBars/></div>

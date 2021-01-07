@@ -1,0 +1,96 @@
+@import '../../sass-global.scss';
+
+.FAQ__PageContainer{
+    padding: 7rem 5% 0 5%;
+
+    // The following is necessary to stylize the accordion
+    .accordion {
+        border-top: 1px solid rgb(211, 211, 211);
+    }
+
+    .accordionCaret {
+        //Thisisabuttonbackground-color: #FAF5F6;
+        background-color: #FAF5F6;
+        color: $themePink;
+        padding: 2px 6px;
+        border: none;
+        border-radius: 50%   ;
+        -webkit-border-radius: 50%   ;
+        -moz-border-radius: 50%   ;
+        -ms-border-radius: 50%   ;
+        -o-border-radius: 50%   ;
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        position:relative;
+        border-bottom: none;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .card {
+        border-top:none;
+    }
+
+
+    .card-header:before {
+        content : "";
+        position: absolute;
+        top: 0;
+        left    : 1.5vw;
+        bottom  : 0;
+        height  : 1px;
+        width   : 85vw;  /* or 100px */
+        border-bottom:1px solid rgb(211, 211, 211);
+      }
+
+      .first-card-header:before {
+          border-bottom: none;
+      }
+
+}
+
+.FAQ__Header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.FAQ__button_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    width: 60%;
+    margin: 2rem 0 0 22%;
+}
+
+.FAQ_button {
+    width: 8rem;
+    background-color: white;
+    color: $defaultFontColor;
+    border: 1px solid $defaultFontColor;
+    padding: 3px;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    &:focus {
+        background: $gradientBackground;
+        color: white;
+        outline: 1px auto $themePink;
+    }
+}
+
+.FAQ__Body {
+    margin-bottom: 3em;
+}

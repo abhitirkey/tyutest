@@ -17,7 +17,7 @@ function Courses() {
                 <Row>
                     <Col className="courseCol" sm={{span:12}} md={{span: 6}}>
                         <img src={PythonLogo} alt="Python" />
-                        <span>Python-Django Development</span>
+                        <span>Python-Django Developer</span>
                         <Link to="/contact-us"><button className="theme-hollow-btn boldText">Become a Developer Now</button></Link>    
                     </Col>
                     <Col className="courseCol" sm={{span:12}} md={{span: 6}}>
