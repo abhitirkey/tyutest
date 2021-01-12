@@ -1,0 +1,44 @@
+@import '../../sass-global.scss';
+
+.careers-grid {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.job-card {
+    background-color: #F8F8F8;
+    padding: 2rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+    p:nth-child(2) {
+        svg {
+            position: relative;
+            font-size: 1.2em;
+            top: -1px;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: $gradientBackground;
+        color: white;
+    }
+}
+
+@media only screen and (max-width:926px){
+    .careers-grid {
+        grid-template-columns: 1fr 1fr;
+    }    
+}
+
+@media only screen and (max-width:480px){
+    .careers-grid {
+        grid-template-columns: 1fr;
+    }    
+}

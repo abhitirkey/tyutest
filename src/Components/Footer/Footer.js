@@ -14,18 +14,17 @@ function Footer() {
             <div className="footer-row">
                 <div className="footer-col left">
                     <img alt="" src={logo}/>
-                    <p className="footer-about">The next Gen SaaS based peer to peer student learning, networking and upskilling platform. Why go through the hassle of visiting various different websites or platforms for various needs? Now find Notes Sharing, Knowledge Base, Networking, Upskilling and Alumni Connect along with a web of ancillary modules such as Workshops, Internships, Jobs, Career Counselling, Education Loans etc. under one single ecosystem.
+                    <p className="footer-about">The next Gen SaaS based peer to peer student learning, networking and ing platform. Why go through the hassle of visiting various different websites or platforms for various needs? Now find Notes Sharing, Knowledge Base, Networking, ing and Alumni Connect along with a web of ancillary modules such as Workshops, Internships, Jobs, Career Counselling, Education Loans etc. under one single ecosystem.
                     </p>
                     <p className="footer-about">With tyutee let's Change the way every Student Networks and Learns on the Go.</p>
                 </div>
                 <div className="space-div"></div>
                 <div className="footer-col right">
                     <div className="links-cluster">
-                        <Link to='/'>About us</Link>
-                        <Link to='/coming-soon'>Become a mentor</Link>
-                        <Link to="/coming-soon">Income Share Agreement</Link>
+                        <Link to='/become-a-mentor'>Become a mentor</Link>
+                        <Link to="/fees-and-isa">Income Share Agreement</Link>
                         <Link to="/contact-us">Contact Us</Link>
-                        <Link to="/coming-soon">Careers</Link>
+                        <Link to="/careers">Careers</Link>
                     </div>
                 </div>
             </div>

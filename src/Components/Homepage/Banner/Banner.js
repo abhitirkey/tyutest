@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row'
 import Col from  'react-bootstrap/Col'
 
 import Frame1 from './Learn.png'
-import Frame2 from './Upskill.png'
+import Frame2 from './Reskill.png'
 import Frame3 from './Network.png'
 
 export class HomeBanner extends Component {
@@ -24,7 +24,7 @@ export class HomeBanner extends Component {
                             <div class="textSlideContainer">
                                 <div className="textSlider">
                                     <h2 className="learn">Learn</h2>
-                                    <h2 className="upskill">Upskill</h2>
+                                    <h2 className="reskill">Reskill</h2>
                                     <h2 className="network">Network</h2>
                                     <h2 className="learn2">Learn</h2>
                                 </div>
@@ -36,7 +36,7 @@ export class HomeBanner extends Component {
                         <Col className="bannerCol image" sm={{span: 12, order:1}} xs={{ span: 12, order: 1}} md={{ span: 7, order: 1}} lg={{ span: 7, order: 1}}>
                             {/* <div className="imageSlider"> */}
                                 <img class="slide1" src={Frame1} alt="Learn"/>
-                                <img class="slide2" src={Frame2} alt="Upskill"/>
+                                <img class="slide2" src={Frame2} alt=""/>
                                 <img class="slide3" src={Frame3} alt="Network"/>
                                 <img class="slide4" src={Frame1} alt="Learn"/>
                             {/* </div> */}

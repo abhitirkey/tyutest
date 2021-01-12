@@ -1,0 +1,74 @@
+[
+    {
+        "position" : "Python Engineer",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "2+"
+    },
+    {
+        "position" : "Full Stack Engineer",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "2+"
+    },
+    {
+        "position" : "UI/UX Designer",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "2+"
+    },
+    {
+        "position" : "Business Manager-Sales",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "5+"
+    },
+    {
+        "position" : "Business Development Associate",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "2+"
+    },
+    {
+        "position" : "Marketing Manager",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "3+"
+    },
+    {
+        "position" : "Human Resource Manager",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "3+"
+    },
+    {
+        "position" : "Campus Brand Ambassador",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "X"
+    },
+    {
+        "position" : "Python Team Lead",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "5+"
+    },
+    {
+        "position" : "Python Manager",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "10+"
+    },
+    {
+        "position" : "Technical Architect",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "8+"
+    },
+    {
+        "position" : "Software Developer Intern",
+        "location" : "Bangalore",
+        "description" : "Lorem ipsum",
+        "experience" : "X"
+    }
+]

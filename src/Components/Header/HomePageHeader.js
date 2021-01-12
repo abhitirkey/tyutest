@@ -41,7 +41,7 @@ class HomePageHeader extends React.Component {
                         <li className="closeMenu" onClick={this.hideNav}><FaTimes/></li>
                         <li><a href="https://login.tyutee.com" target="_blank" rel="noreferrer" className="theme-hollow-btn grayed grayLink">Login</a></li>
                         <Link className="navlink" to='/contact-us'><li><button className="theme-hollow-btn grayed">Request a Demo</button></li></Link>
-                        <Link className="navlink" to='/isa'><li><button className="theme-btn">Get Upskilled</button></li></Link>
+                        <Link className="navlink" to='/isa'><li><button className="theme-btn">Get Reskilled</button></li></Link>
                     </ul>
                     <div className="menuIcon" onClick={this.showNav}><FaBars/></div>
                 </nav>

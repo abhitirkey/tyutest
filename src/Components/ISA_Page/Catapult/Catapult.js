@@ -16,7 +16,7 @@ function Catapult () {
 
                         <h2>Catapult your career with tyutee now!</h2>
                         <span className="boldText">Get your career into warp speed</span>
-                        <Link to="/contact-us"><button className="theme-btn">Begin your Journey</button></Link>
+                        <Link to="/isa/enrollment-form"><button className="theme-btn">Begin your Journey</button></Link>
                     </Col>
                     <Col className="col image" sm={{span: 12, order:1}} xs={{ span: 12, order: 1}} md={{ span: 4, order: 1}}>
                         <img src={catapult_img} alt="Catapult"/>

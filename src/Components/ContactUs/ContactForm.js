@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-// import Alert from 'react-bootstrap/Alert'
-// import Button from 'react-bootstrap/Button'
-import Button from 'react-bootstrap/Button'
+
 import Modal from 'react-bootstrap/Modal'
 import axios from 'axios'
 
@@ -118,12 +116,19 @@ export default class ContactForm extends Component {
                     this.setState({
                         formDataSent: true,
                         emailSuccess: false,
-                        FormModalTitle: 'Sorry!',
+                        FormModalTitle: 'Sorry about this...',
                         FormModalBody: 'We are encountering server issues at this time. Please try again or come back to us later.'
                     })
                 }
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                this.setState({
+                    formDataSent: true,
+                    emailSuccess: false,
+                    FormModalTitle: 'Sorry about this...',
+                    FormModalBody: 'We are encountering server issues at this time. Please try again or come back to us later.'
+                })
+                console.log(error)});
         }
         else {
             alert("Please make sure all required fields are filled.");
@@ -171,7 +176,7 @@ export default class ContactForm extends Component {
             </div>
             <Modal show={this.state.formModalShow} onHide={this.handleClose}>
                 <Modal.Body style={ModalStyle}>
-                        {this.state.emailSuccess ? <img style={{width: '20%'}} src={SentMailPNG} alt="SentMailPNG" /> : ''}
+                        {this.state.emailSuccess? <img style={{width: '20%'}} src={SentMailPNG} alt="SentMailPNG" /> : ''}
                         <h2>{this.state.FormModalTitle}</h2>
                         <span>{this.state.FormModalBody}</span>
                 </Modal.Body>

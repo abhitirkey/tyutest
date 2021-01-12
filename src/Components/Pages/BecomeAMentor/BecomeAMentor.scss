@@ -1,0 +1,51 @@
+.mentor-form-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mentor-form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FAF5F6;
+    padding-top: 2rem;
+
+    .contact-form-container {
+        flex-basis: 48%;
+    }
+}
+
+.thank_you_mentor {
+    flex-basis: 48%;
+    text-align: center;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.mentor-image-container {
+    flex-basis: 48%;
+    text-align: center;
+    height: 100%;
+    img {
+        width:50%;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .mentor-form-container {
+        .contact-form-container, .mentor-image-container {
+            flex-basis: 100%;
+            margin-bottom: 2rem;
+            height:fit-content;
+        }
+    }
+
+    .thank_you_mentor {
+        flex-basis: 100%;
+        text-align: center;
+        align-items: center;
+    }
+}

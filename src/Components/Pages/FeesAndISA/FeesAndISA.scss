@@ -1,0 +1,97 @@
+.WhatIsISA {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    // margin-top: 5rem;
+    img {
+        width: 100%;
+    }
+    .text {
+        margin:auto;
+    }
+    p {
+        text-align: justify;
+    }
+}
+
+.isa_how_section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.isa_how_col {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    width: 15rem;
+    margin: 0 2rem;
+    // height: 30rem;
+    img {
+        width: 100%;
+    }
+    p {
+        margin-top: 1.5rem;
+        text-align: justify;
+    }
+}
+
+.how_text {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.calc_container {
+    background-color: #FAF5F6;
+    padding: 3%;
+    margin: 4rem 0 1.5rem 0;
+    box-shadow: 0 3px 5px 6px rgba(126, 126, 126, 0.082);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+    .col-md-6, .col-md-12{
+        margin-bottom: 2rem;
+    }
+}
+.MonthlyTenure {
+    text-align: center;
+    svg {
+        position: relative;
+        top: -2px;
+    
+    }
+}
+
+// @media only screen and (max-width: 991px){
+//     .MonthlyTenure {
+//         text-align: center;
+//     }
+// }
+
+@media only screen and (max-width: 767px){
+    .WhatIsISA {
+        grid-template-columns: 1fr;
+    }
+
+    .isa_how_col {
+        margin-bottom: 2rem;
+        width: 90%;
+        img {
+            width: 15rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 480){
+
+    .isa_how_col {
+        width: 90%;
+        img {
+            width: 100%;
+        }
+    }
+}

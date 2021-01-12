@@ -1,0 +1,45 @@
+@import './sass-global.scss';
+
+.contact-form-container {
+    height: fit-content;
+    border-radius: 1rem    ;
+    -webkit-border-radius: 1rem    ;
+    -moz-border-radius: 1rem    ;
+    -ms-border-radius: 1rem    ;
+    -o-border-radius: 1rem    ;
+    box-shadow: 0 3px 5px 6px rgba(126, 126, 126, 0.082);
+
+    background-color: white;
+
+    padding: 2rem;
+    .form-elements {
+        height:100%;
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        ::placeholder {
+            color: rgb(150, 150, 150);
+        }
+        > div {
+            margin-bottom: 1.5rem;
+        }
+        input, textarea {
+            padding: 5px;
+            border: 1px solid $themePinkLight;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+         
+        button {
+            width: 100%;
+        }
+    }
+}

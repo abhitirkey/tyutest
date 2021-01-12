@@ -211,8 +211,8 @@ class Banner extends Component {
                         <Col className="bannerCol text" sm={{span: 12, order:2}} xs={{ span: 12, order:2}} md={{ span: 6, order: 1}}>
                             <div style={{flex: 3}}></div>
                             <h2 className="titleDesktop">Do you want to get</h2>
-                            <h2 className="titleDesktop">Upskilled?</h2>
-                            <h2 className="titleMobile">Do you want to get Upskilled?</h2>
+                            <h2 className="titleDesktop">Reskilled?</h2>
+                            <h2 className="titleMobile">Do you want to get Reskilled?</h2>
                             <span className="pay">Pay <strong><FaRupeeSign/>0</strong> till you get placed</span>
                             <div className="flex-spacer"></div>
                             <span className="boldText">We at tyutee help you reshape and catapult your career.</span>

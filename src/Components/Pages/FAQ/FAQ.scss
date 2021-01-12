@@ -1,7 +1,6 @@
 @import '../../sass-global.scss';
 
 .FAQ__PageContainer{
-    padding: 7rem 5% 0 5%;
 
     // The following is necessary to stylize the accordion
     .accordion {
@@ -68,6 +67,7 @@
 .FAQ__button_list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
     justify-content: center;
     width: 60%;
     margin: 2rem 0 0 22%;
@@ -93,4 +93,10 @@
 
 .FAQ__Body {
     margin-bottom: 3em;
+}
+
+@media only screen and (max-width: 645px) {
+    .FAQ__button_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

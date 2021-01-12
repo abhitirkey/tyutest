@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useLayoutEffect} from 'react'
 import Header from '../../Header/Header';
 
 import Accordion from 'react-bootstrap/Accordion';
@@ -36,10 +36,15 @@ function ContextAwareToggle({ children, eventKey, callback }) {
   }
 
 function FAQ() {
+
+    useLayoutEffect(() => {
+        window.scrollTo(0, 0)
+    });
+
     return (
         <>
           <Header/>
-          <div className="FAQ__PageContainer">
+          <div className="page-top-section FAQ__PageContainer">
             <div className="FAQ__Header">
                     <h2><strong>Frequently Asked Questions</strong></h2>
                     <div className="FAQ__button_list">

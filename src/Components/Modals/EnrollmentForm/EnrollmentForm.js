@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Modal from 'react-bootstrap/Modal';
 import SentMailPNG from './SentMail.png';
-
+import MailErrorPNG from './MailError.png';
 import axios from 'axios';
 
 export class EnrollmentForm extends Component {
@@ -34,22 +34,29 @@ export class EnrollmentForm extends Component {
     }
 
     componentDidUpdate = async (prevProps) => {
-        if(prevProps.showFormModal !== this.props.showFormModal){
-            await this.setState({ showModal : true });
+        // if(prevProps.showFormModal !== this.props.showFormModal){
+        //     await this.setState({ showModal : true });
+        // }
+
+        // if(this.props.showEnrollmentForm){
+        //     await this.setState({ showModal: true });
+        // }
+    }
+
+    componentDidMount = async () => {
+        if(this.props.showEnrollmentForm){
+            await this.setState({ showModal: true });
         }
     }
 
     handleClose = async () => {
         // On closing the form modal
         await this.setState( {showModal: false} );
+        this.props.formDisplayHandler(false);
     }
 
     handleCloseSent= async () => {
         await this.setState(this.initialState);
-    }
-
-    openModal = async () => {
-        await this.setState({ showModal: true });
     }
 
     fieldChangeHandler = async ({ target }) => {
@@ -116,7 +123,7 @@ export class EnrollmentForm extends Component {
         }
 
         if(this.state.nameValid && this.state.emailValid && this.state.phoneValid && this.state.categoryValid && this.state.courseValid && this.state.batchValid && this.state.whyValid)
-            this.setState({ formOK: true});
+            this.setState({ formOK: true });
     }
 
     submitHandler = async (e) => {
@@ -133,8 +140,6 @@ export class EnrollmentForm extends Component {
             await this.setState({ categoryValid : false , formOK: false });
         if(this.state.course === '')
             await this.setState({ courseValid : false , formOK: false });
-        if(this.state.batch === '')
-            await this.setState({ batchValid : false , formOK: false });
         if(this.state.why === '')
             await this.setState({ whyValid : false , formOK: false });
         
@@ -250,7 +255,7 @@ export class EnrollmentForm extends Component {
                     <Modal.Body style={ModalStyle}>
                             {!this.state.emailSuccess ? 
                                 <>                        
-                                    <img style={{width: '20%'}} src={SentMailPNG} alt="SentMailPNG" />
+                                    <img style={{width: '20%'}} src={MailErrorPNG} alt="Mail Error" />
                                     <h2>Sorry about this...</h2>
                                     <span>Our server is experiencing problems. Please come back in a while...</span>
                                 </> : 

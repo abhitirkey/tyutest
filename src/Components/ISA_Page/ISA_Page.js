@@ -16,7 +16,10 @@ import Catapult from './Catapult/Catapult'
 function ISA_Page() {
 
     useLayoutEffect(() => {
-        window.scrollTo(0, 0)
+        const pathname = window.location.pathname;
+        if(pathname !== '/isa/enrollment-form'){
+            window.scrollTo(0, 0)
+        }
     });
 
     return (

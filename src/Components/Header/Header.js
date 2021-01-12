@@ -40,8 +40,8 @@ class Header extends React.Component {
                         
                         <li className="closeMenu" onClick={this.hideNav}><FaTimes/></li>
                         <Link className="navlink" to='/coming-soon'><li>Courses</li></Link>
-                        <Link className="navlink" to='/coming-soon'><li>Hire From Us</li></Link>
-                        <Link className="navlink" to='/coming-soon'><li>Fees & ISA</li></Link>
+                        <Link className="navlink" to='/hire-from-us'><li>Hire From Us</li></Link>
+                        <Link className="navlink" to='/fees-and-isa'><li>Fees & ISA</li></Link>
                         <Link className="navlink" to='/faq'><li>FAQ</li></Link>
                         <li><a href="https://login.tyutee.com" target="_blank" rel="noreferrer" className="login-btn themeLink">Login</a></li>
                     </ul>
