@@ -21,7 +21,7 @@ function HowISAWorks() {
                 <div className="isa_how_col">
                     <img src={image2} alt="Pay 15%"/>
                     <div className="how_text">
-                        <span className="boldText">Pay 15% of monthly gross salary after you get an offer</span>
+                        <span className="boldText">Repay your ISA amount in a zero cost EMI format post getting placed and joining the firm.</span>
                         {/* <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat </p> */}
                     </div>
                 </div>

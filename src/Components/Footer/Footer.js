@@ -14,7 +14,7 @@ function Footer() {
             <div className="footer-row">
                 <div className="footer-col left">
                     <img alt="" src={logo}/>
-                    <p className="footer-about">The next Gen SaaS based peer to peer student learning, networking and ing platform. Why go through the hassle of visiting various different websites or platforms for various needs? Now find Notes Sharing, Knowledge Base, Networking, ing and Alumni Connect along with a web of ancillary modules such as Workshops, Internships, Jobs, Career Counselling, Education Loans etc. under one single ecosystem.
+                    <p className="footer-about">The next Gen SaaS based peer to peer student learning, networking and reskilling platform. Why go through the hassle of visiting various different websites or platforms for various needs? Now find Notes Sharing, Knowledge Base, Networking, ing and Alumni Connect along with a web of ancillary modules such as Workshops, Internships, Jobs, Career Counselling, Education Loans etc. under one single ecosystem.
                     </p>
                     <p className="footer-about">With tyutee let's Change the way every Student Networks and Learns on the Go.</p>
                 </div>

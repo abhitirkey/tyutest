@@ -19,7 +19,7 @@ function HireFromUs() {
             <Header/>
             <div className="page-top-section HireFromUs">
                 <h2 className="boldText center">Hire From Us</h2>
-                <p className="headerText center">Do you seek resource ready employees?<br/>Want to avoid huge training costs?<br/>Come partner with tyutee and let us deal with your overhead upskilling cost.<br/>We provide you industry ready candidates at Zero cost.</p>
+                <p className="headerText center">Do you seek resource ready employees?<br/>Want to avoid huge training costs?<br/>Come partner with tyutee and let us deal with your overhead reskilling cost.<br/>We provide you industry ready candidates at Zero cost.</p>
                 <hr style={{border: "1px solid #797979", margin: '0 35vw 2rem 35vw'}}/>
                 <h4 style={{marginBottom: '2rem'}} className="boldText center">Why Us?</h4>
                 <div className="WhyUs_Section">

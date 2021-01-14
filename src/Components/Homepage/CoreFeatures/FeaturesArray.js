@@ -18,7 +18,7 @@ const FeaturesArray = [
     },
     {
         'imageSRC' : Frame2,
-        'title' : 'Get upskilled to succeed'
+        'title' : 'Get reskilled to succeed'
     },
     {
         'imageSRC' : Frame3,

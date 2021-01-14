@@ -36,6 +36,11 @@ a {
 .flex-spacer {
     flex: 1;
 }
+
+.pinkBackground {
+    background-color: $backgroundPink;
+}
+
 .tinyText {
     font-size: 14px;
 }
@@ -75,10 +80,10 @@ a {
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
-    // opacity: 90%;
+    //opacity: 90%;
     width: fit-content;
-    &:hover
-    {
+    &:hover 
+{
         // opacity: 100%;
     }
 
@@ -122,6 +127,17 @@ a {
     &:focus {
         outline: none;
     }
+}
+
+.pinkBullet {
+    position: absolute;
+    left: -2.5rem;
+    color: $themePink;
+}
+
+.RupeeSign {
+    position: relative;
+    top: -3%;
 }
 
 .grayed {

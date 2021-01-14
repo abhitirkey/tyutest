@@ -52,7 +52,8 @@ export class EnrollmentForm extends Component {
     handleClose = async () => {
         // On closing the form modal
         await this.setState( {showModal: false} );
-        this.props.formDisplayHandler(false);
+        this.props.hideForm();
+        // this.props.formDisplayHandler(false);
     }
 
     handleCloseSent= async () => {
@@ -200,79 +201,86 @@ export class EnrollmentForm extends Component {
             color: '#797979'
         };
 
-        return (
-            <>
-                <Modal show={this.state.showModal} onHide={this.handleClose}>
-                    <Modal.Header style={{color: '#797979', borderBottom: '0 none'}}closeButton>
-                        {/* <span>Fill in all the details carefully</span> */}
-                    </Modal.Header>
-                    <Modal.Body style={ModalStyle}>
-                                <h2><strong>Enrollment Form</strong></h2>
-                                <span style={{marginBottom: '2rem'}}>Fill in all the details carefully</span>
-                                <form onSubmit={this.submitHandler} className="form-elements">
-                                
-                                <div className="field__div">
-                                    <input type="text" className={!this.state.nameValid ? 'is-invalid form-control': 'form-control'} name="name" placeholder="Name*" onChange={this.fieldChangeHandler} value={this.state.name}/>
-                                    {!this.state.nameValid? <span className="span-invalid">This field is mandatory.</span>: ''}
-                                </div>
-                                <div className="field__div">
-                                    <input className={!this.state.emailValid ? 'is-invalid form-control' : 'form-control'} type="email" name="email" placeholder="Email*" onChange={this.fieldChangeHandler} value={this.state.email}/>
-                                    {!this.state.emailValid? <span className="span-invalid">Please enter a valid email address</span>: ''}
-                                </div>
-                                <div className="field__div">
-                                    <input className={!this.state.phoneValid ? 'is-invalid form-control' : 'form-control'} type="text" name="phone" placeholder="Phone Number*" onChange={this.fieldChangeHandler} value={this.state.phone}/>
-                                    {!this.state.phoneValid? <span className="span-invalid">Please enter a valid phone number</span>: ''}
-                                </div>
-                                <div className="field__div">
-                                    <select name="category" style={{paddingRight: '1rem'}} className={!this.state.categoryValid ? 'is-invalid form-control': 'form-control'}  value={this.state.level} onChange={this.fieldChangeHandler}>
-                                        <option value="" disabled selected>Category*</option>
-                                        <option value={2}>Pre-final year</option>
-                                        <option value={1}>Final year</option>
-                                        <option value={3}>Fresher</option>
-                                        <option value={4}>Professional</option>
-                                    </select>
-                                    {!this.state.categoryValid ? <span className="span-invalid">This field is mandatory</span>: ''}
-                                </div>
-                                <div className="field__div">
-                                    <select name="course" className={!this.state.courseValid ? 'is-invalid form-control': 'form-control'} value={this.state.course} onChange={this.fieldChangeHandler}>
-                                        <option value="" disabled selected>Course*</option>    
-                                        <option value={0}>Python-Django Developer</option>
-                                        <option value={1}>Ui/UX Design</option>
-                                    </select>
-                                    {!this.state.courseValid ? <span className="span-invalid">This field is mandatory</span>: ''}
-                                </div>
-                                <div className="field__div">
-                                    <textarea name="why" className={!this.state.whyValid ? 'is-invalid form-control': 'form-control'}  value={this.state.why} placeholder="Why do you want to join this course*" rows="7" onChange={this.fieldChangeHandler}></textarea>
-                                    {!this.state.whyValid ? <span className="span-invalid">This field is mandatory</span>: ''}
-                                </div>
-                                <div className="field_div">
-                                <button style={{width: '100%', padding: '0.5rem'}} className="theme-btn">{this.state.buttonText}</button>
-                                </div>
-                            </form>
-                    </Modal.Body>
-                </Modal>
-                <Modal show={this.state.ModalSentShow} onHide={this.handleCloseSent}>
-                    <Modal.Body style={ModalStyle}>
-                            {!this.state.emailSuccess ? 
-                                <>                        
-                                    <img style={{width: '20%'}} src={MailErrorPNG} alt="Mail Error" />
-                                    <h2>Sorry about this...</h2>
-                                    <span>Our server is experiencing problems. Please come back in a while...</span>
-                                </> : 
-                                <>
-                                    <img style={{width: '20%'}} src={SentMailPNG} alt="SentMailPNG" />
-                                    <h2>Thank you for enrolling!</h2>
-                                    <span>We will get back to you shortly.</span>
-                                </>}
-                    </Modal.Body>
-                    <Modal.Footer>
-                    <button className="theme-hollow-btn grayed" onClick={this.handleCloseSent}>
-                        Close
-                    </button>
-                    </Modal.Footer>
-                </Modal>
-            </>
-        )
+        if(this.props.showEnrollmentForm){
+            return (
+                <>
+                    <Modal show={this.props.showEnrollmentForm} onHide={this.handleClose}>
+                        <Modal.Header style={{color: '#797979', borderBottom: '0 none'}}closeButton>
+                            {/* <span>Fill in all the details carefully</span> */}
+                        </Modal.Header>
+                        <Modal.Body style={ModalStyle}>
+                                    <h2><strong>Enrollment Form</strong></h2>
+                                    <span style={{marginBottom: '2rem'}}>Fill in all the details carefully</span>
+                                    <form onSubmit={this.submitHandler} className="form-elements">
+                                    
+                                    <div className="field__div">
+                                        <input type="text" className={!this.state.nameValid ? 'is-invalid form-control': 'form-control'} name="name" placeholder="Name*" onChange={this.fieldChangeHandler} value={this.state.name}/>
+                                        {!this.state.nameValid? <span className="span-invalid">This field is mandatory.</span>: ''}
+                                    </div>
+                                    <div className="field__div">
+                                        <input className={!this.state.emailValid ? 'is-invalid form-control' : 'form-control'} type="email" name="email" placeholder="Email*" onChange={this.fieldChangeHandler} value={this.state.email}/>
+                                        {!this.state.emailValid? <span className="span-invalid">Please enter a valid email address</span>: ''}
+                                    </div>
+                                    <div className="field__div">
+                                        <input className={!this.state.phoneValid ? 'is-invalid form-control' : 'form-control'} type="text" name="phone" placeholder="Phone Number*" onChange={this.fieldChangeHandler} value={this.state.phone}/>
+                                        {!this.state.phoneValid? <span className="span-invalid">Please enter a valid phone number</span>: ''}
+                                    </div>
+                                    <div className="field__div">
+                                        <select name="category" style={{paddingRight: '1rem'}} className={!this.state.categoryValid ? 'is-invalid form-control': 'form-control'}  value={this.state.level} onChange={this.fieldChangeHandler}>
+                                            <option value="" disabled selected>Category*</option>
+                                            <option value={2}>Pre-final year</option>
+                                            <option value={1}>Final year</option>
+                                            <option value={3}>Fresher</option>
+                                            <option value={4}>Professional</option>
+                                        </select>
+                                        {!this.state.categoryValid ? <span className="span-invalid">This field is mandatory</span>: ''}
+                                    </div>
+                                    <div className="field__div">
+                                        <select name="course" className={!this.state.courseValid ? 'is-invalid form-control': 'form-control'} value={this.state.course} onChange={this.fieldChangeHandler}>
+                                            <option value="" disabled selected>Course*</option>    
+                                            <option value={0}>Python-Django Developer</option>
+                                            <option value={1}>Ui/UX Design</option>
+                                        </select>
+                                        {!this.state.courseValid ? <span className="span-invalid">This field is mandatory</span>: ''}
+                                    </div>
+                                    <div className="field__div">
+                                        <textarea name="why" className={!this.state.whyValid ? 'is-invalid form-control': 'form-control'}  value={this.state.why} placeholder="Why do you want to join this course*" rows="7" onChange={this.fieldChangeHandler}></textarea>
+                                        {!this.state.whyValid ? <span className="span-invalid">This field is mandatory</span>: ''}
+                                    </div>
+                                    <div className="field_div">
+                                    <button style={{width: '100%', padding: '0.5rem'}} className="theme-btn">{this.state.buttonText}</button>
+                                    </div>
+                                </form>
+                        </Modal.Body>
+                    </Modal>
+                    <Modal show={this.state.ModalSentShow} onHide={this.handleCloseSent}>
+                        <Modal.Body style={ModalStyle}>
+                                {!this.state.emailSuccess ? 
+                                    <>                        
+                                        <img style={{width: '20%'}} src={MailErrorPNG} alt="Mail Error" />
+                                        <h2>Sorry about this...</h2>
+                                        <span>Our server is experiencing problems. Please come back in a while...</span>
+                                    </> : 
+                                    <>
+                                        <img style={{width: '20%'}} src={SentMailPNG} alt="SentMailPNG" />
+                                        <h2>Thank you for enrolling!</h2>
+                                        <span>We will get back to you shortly.</span>
+                                    </>}
+                        </Modal.Body>
+                        <Modal.Footer>
+                        <button className="theme-hollow-btn grayed" onClick={this.handleCloseSent}>
+                            Close
+                        </button>
+                        </Modal.Footer>
+                    </Modal>
+                </>
+            )
+        }
+        else {
+            return null;
+        }
+
+        
     }
 }
 

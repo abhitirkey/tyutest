@@ -39,7 +39,7 @@ class Header extends React.Component {
                     <ul className={navMenuClass}>
                         
                         <li className="closeMenu" onClick={this.hideNav}><FaTimes/></li>
-                        <Link className="navlink" to='/coming-soon'><li>Courses</li></Link>
+                        <Link className="navlink" to='/courses'><li>Courses</li></Link>
                         <Link className="navlink" to='/hire-from-us'><li>Hire From Us</li></Link>
                         <Link className="navlink" to='/fees-and-isa'><li>Fees & ISA</li></Link>
                         <Link className="navlink" to='/faq'><li>FAQ</li></Link>
