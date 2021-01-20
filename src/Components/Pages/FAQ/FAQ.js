@@ -48,10 +48,10 @@ function FAQ() {
             <div className="FAQ__Header">
                     <h2><strong>Frequently Asked Questions</strong></h2>
                     <div className="FAQ__button_list">
-                        <button className="FAQ_button">ISA</button>
-                        <button className="FAQ_button">General</button>
-                        <button className="FAQ_button">Application</button>
-                        <button className="FAQ_button">Placement</button>
+                        <span className="FAQ_button">ISA</span>
+                        <span className="FAQ_button">General</span>
+                        <span className="FAQ_button">Application</span>
+                        <span className="FAQ_button">Placement</span>
                     </div>
             </div>
             <div className="FAQ__Body">
@@ -61,7 +61,6 @@ function FAQ() {
                     {
                         faqArray.map((item, index) => {
 
-                            console.log("Index: ", index);
                             return (
                                 <Card>
                                     <ContextAwareToggle eventKey={index+1}>

@@ -5,10 +5,15 @@ import Lifetime from './Images/Python/Features/Lifetime.png'
 import Certification from './Images/Python/Features/Certification.png'
 import Placement from './Images/Python/Features/Placement.png'
 
+import PythonLogo from './Images/Python/Logos/python-logo.png'
+import UIUXLogo from './Images/UI_UX_Design/Logos/ui_ux_logo.png'
+
 export default  [
     {
         "title" : "Python - Django developer",
+        "logo" : PythonLogo,
         "description" : "This program covers new considerations, and core competencies required for any Python technical professional for industry job ready. This program places a greater emphasis on technology, frameworks and business knowledge, and make students ready for their desired job with a higher salary.",
+        "prerequisites" : null,
         "Experience" : 0,
         "Duration" : "150 Hours",
         "Mode" : "Online",
@@ -74,6 +79,11 @@ export default  [
             }
         ]
         
+    }, 
+    {
+        "title": "UI/UX Design",
+        "logo": UIUXLogo,
+        "description": "Coming Soon"
     }
 ]
 

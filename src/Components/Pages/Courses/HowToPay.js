@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom'
 
 function HowToPay() {
     return (
-        <div className="section-content pinkBackground HowToPay">
+        <div className="pinkBackground HowToPay">
             <h2 className="boldText center">How To Pay</h2>
             <Container>
                 <Row>

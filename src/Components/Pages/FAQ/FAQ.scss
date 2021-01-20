@@ -84,11 +84,6 @@
     -moz-border-radius: 0.5rem;
     -ms-border-radius: 0.5rem;
     -o-border-radius: 0.5rem;
-    &:focus {
-        background: $gradientBackground;
-        color: white;
-        outline: 1px auto $themePink;
-    }
 }
 
 .FAQ__Body {

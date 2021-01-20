@@ -5,7 +5,7 @@ import CoursesData from './CoursesData'
 function CourseFeatures() {
     let FeaturesArray = CoursesData[0].Features;
     return (
-        <div className="section-content courseFeaturesSection">
+        <div className="courseFeaturesSection">
             <h2 style={{marginBottom: '2rem'}} className="boldText center">Course Features</h2>
             <div className="courseFeaturesGrid">
                 {

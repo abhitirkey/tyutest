@@ -6,12 +6,12 @@ import CoursesData from './CoursesData'
 
 function CourseCurriculum() {
 
-    let Curriculum = CoursesData[0].Curriculum; // This is an array comprising of Curricular Modules
+    let Curriculum = CoursesData[0].Curriculum; // This is an array comprising of Curricular Modules of the Python Django course
     
     return (
-        <div className="section-content curriculumSection">
+        <div className="curriculumSection">
             <h2 className="boldText">Course Curriculum</h2>
-            <div className="section-content curriculum">
+            <div className="curriculum">
                 {
                     Curriculum.map((item, index) => {
 

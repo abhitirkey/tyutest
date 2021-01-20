@@ -5,6 +5,8 @@ import SentMailPNG from './SentMail.png';
 import MailErrorPNG from './MailError.png';
 import axios from 'axios';
 
+// This component is to be commonly used across various pages such as the ISA page and the courses page.
+
 export class EnrollmentForm extends Component {
 
     constructor(props){
@@ -33,16 +35,6 @@ export class EnrollmentForm extends Component {
         this.initialState = this.state;
     }
 
-    componentDidUpdate = async (prevProps) => {
-        // if(prevProps.showFormModal !== this.props.showFormModal){
-        //     await this.setState({ showModal : true });
-        // }
-
-        // if(this.props.showEnrollmentForm){
-        //     await this.setState({ showModal: true });
-        // }
-    }
-
     componentDidMount = async () => {
         if(this.props.showEnrollmentForm){
             await this.setState({ showModal: true });
@@ -53,7 +45,6 @@ export class EnrollmentForm extends Component {
         // On closing the form modal
         await this.setState( {showModal: false} );
         this.props.hideForm();
-        // this.props.formDisplayHandler(false);
     }
 
     handleCloseSent= async () => {
@@ -201,6 +192,25 @@ export class EnrollmentForm extends Component {
             color: '#797979'
         };
 
+        // alert(window.location.pathname);
+
+        let course_options = <> 
+                                <option value="" disabled>Course*</option>    
+                                <option value={0} selected>Python-Django Developer</option>
+                                <option value={1} disabled>UI/UX Design</option>
+                            </>;
+
+        if(window.location.pathname === '/courses/python-django-developer'){
+            course_options = <> 
+                                <option value={0} selected>Python-Django Developer</option>
+                            </>;
+        }
+        else if(window.location.pathname === '/courses/ui-ux-developer'){
+            course_options = <> 
+                                <option value={1} selected>UI/UX Design</option>
+                            </>;
+        }
+
         if(this.props.showEnrollmentForm){
             return (
                 <>
@@ -236,10 +246,8 @@ export class EnrollmentForm extends Component {
                                         {!this.state.categoryValid ? <span className="span-invalid">This field is mandatory</span>: ''}
                                     </div>
                                     <div className="field__div">
-                                        <select name="course" className={!this.state.courseValid ? 'is-invalid form-control': 'form-control'} value={this.state.course} onChange={this.fieldChangeHandler}>
-                                            <option value="" disabled selected>Course*</option>    
-                                            <option value={0}>Python-Django Developer</option>
-                                            <option value={1}>Ui/UX Design</option>
+                                        <select name="course" className={!this.state.courseValid ? 'is-invalid form-control': 'form-control'} value={this.state.course} onChange={this.fieldChangeHandler}>                                            
+                                           {course_options}
                                         </select>
                                         {!this.state.courseValid ? <span className="span-invalid">This field is mandatory</span>: ''}
                                     </div>

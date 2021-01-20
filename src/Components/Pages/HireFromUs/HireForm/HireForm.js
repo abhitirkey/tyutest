@@ -26,10 +26,6 @@ export default class HireForm extends Component {
         this.initialState = this.state;
     }
 
-    sentMailOnClose = () => {
-        this.setState(this.initialState);
-    }
-
     fieldChangeHandler = async ({ target }) => {
 
         const { name, value } = target;
@@ -44,7 +40,7 @@ export default class HireForm extends Component {
                     await this.setState({ nameValid: true});
                 }
                 else {
-                    await this.setState({ nameValid: false});
+                    await this.setState({ nameValid: false, formOk: false});
                 }
                 break;
             case 'designation':
@@ -52,7 +48,7 @@ export default class HireForm extends Component {
                     await this.setState({ designationValid: true});
                 }
                 else {
-                    await this.setState({ designationValid: false});
+                    await this.setState({ designationValid: false, formOk: false});
                 }
                 break;
             case 'company':
@@ -60,7 +56,7 @@ export default class HireForm extends Component {
                     await this.setState({ companyValid: true});
                 }
                 else {
-                    await this.setState({ companyValid: false});
+                    await this.setState({ companyValid: false, formOk: false});
                 }
                 break;
             case 'phone':
@@ -70,7 +66,7 @@ export default class HireForm extends Component {
                     await this.setState({ phoneValid: true });
                 }
                 else{
-                    await this.setState({ phoneValid: false });
+                    await this.setState({ phoneValid: false, formOk: false });
                 }
                 break;
             case 'email':
@@ -83,13 +79,13 @@ export default class HireForm extends Component {
                 }
                 else {
                     await this.setState({
-                        emailValid: false
+                        emailValid: false, formOk: false
                     })
                 }
                 break;        
         }
 
-        if(this.state.emailValid && this.state.phoneValid)
+        if(this.state.nameValid && this.state.designationValid && this.state.companyValid && this.state.emailValid && this.state.phoneValid)
             this.setState({ formOK: true});
     }
 
@@ -97,6 +93,7 @@ export default class HireForm extends Component {
         
         e.preventDefault();
 
+        // When submit is clicked without filling in any of the fields, verification must take place.
         if(this.state.name === '')
             await this.setState({ nameValid : false , formOK: false });
         if(this.state.email === '')
@@ -131,17 +128,13 @@ export default class HireForm extends Component {
                         company: '',
                         formDataSent: true,
                         emailSuccess: true,
-                        FormModalTitle: 'Thanks for reaching out!',
-                        FormModalBody: 'We will get back to you shortly.',
                         formOK: false
                     });
                 }
                 else {
                     this.setState({
                         formDataSent: true,
-                        emailSuccess: false,
-                        FormModalTitle: 'Sorry about this...',
-                        FormModalBody: 'We are encountering server issues at this time. Please try again or come back to us later.'
+                        emailSuccess: false
                     })
                 }
             })
@@ -149,9 +142,7 @@ export default class HireForm extends Component {
                 console.log(error);
                 this.setState({
                     formDataSent: true,
-                    emailSuccess: false,
-                    FormModalTitle: 'Sorry about this...',
-                    FormModalBody: 'We are encountering server issues at this time. Please try again or come back to us later.'
+                    emailSuccess: false
                 });
             })
         }

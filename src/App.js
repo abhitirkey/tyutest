@@ -1,15 +1,15 @@
 import React from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import './app.scss'
+import './Components/app-global.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Footer from './Components/Footer/Footer'
 
-import Homepage from './Components/Homepage/Homepage'
-import ISA_Page from './Components/ISA_Page/ISA_Page'
-import ContactUs from './Components/ContactUs/ContactUs'
-import PrivacyPolicy from './Components/PrivacyPolicy/PrivacyPolicy'
-import TermsOfUse from './Components/TermsOfUse/TermsOfUse'
+import Homepage from './Components/Pages/Homepage/Homepage'
+import ISA_Page from './Components/Pages/ISA_Page/ISA_Page'
+import ContactUs from './Components/Pages/ContactUs/ContactUs'
+import PrivacyPolicy from './Components/Pages/PrivacyPolicy/PrivacyPolicy'
+import TermsOfUse from './Components/Pages/TermsOfUse/TermsOfUse'
 
 import FeesAndISA from './Components/Pages/FeesAndISA/FeesAndISA'
 import FAQ from './Components/Pages/FAQ/FAQ'
@@ -23,6 +23,7 @@ import ComingSoon from './Components/Pages/ComingSoon/ComingSoon'
 
 function App() {
     return (
+        // Here we include the main components into the app and define their routes. Each of these components represents a different page.
         <BrowserRouter>
         <div className="AppContainer">
             <Switch>
@@ -36,7 +37,8 @@ function App() {
                 <Route path='/faq' exact component={FAQ}/>               
                 <Route path='/become-a-mentor' exact component={BecomeAMentor}/>               
                 <Route path='/careers' exact component={Careers}/>               
-                <Route path='/courses' exact component={Courses}/>               
+                <Route key="python-django-developer" path='/courses/python-django-developer' exact component={Courses}/>               
+                <Route key="ui-ux-design" path='/courses/ui-ux-design' exact component={Courses}/>               
                 <Route path='/hire-from-us' exact component={HireFromUs}/>               
                 <Route path="/coming-soon" exact component={ComingSoon}/>
             </Switch>
