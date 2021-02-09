@@ -40,7 +40,7 @@ function Footer() {
                 </div>
                 <div className="space-div"></div>
                 <div className="footer-col right">
-                        <Link to="/coming-soon">Blog</Link> | 
+                        <Link to="/blog">Blog</Link> | 
                         <Link to="/privacy-policy"> Privacy Policy</Link> | 
                         <Link to="/terms-of-use"> Terms of Use</Link> 
                 </div>

@@ -16,8 +16,18 @@ class Catapult extends Component {
 
         // State variable to regulate when the enrollment form needs to be displayed
         this.state = {
-            showEnrollmentForm : false
+            showEnrollmentForm : false,
+            background: ''
         };
+    }
+
+    componentDidMount = async () => {
+        const pathname = window.location.pathname;
+        if(pathname.startsWith('/blog')){
+            await this.setState({
+                background: 'beigeBackground'
+            })
+        }
     }
 
     showEnrollmentForm = async () => {
@@ -35,7 +45,7 @@ class Catapult extends Component {
     render() {
         return (
             <>
-            <div className="catapult">
+            <div className={this.state.background+" catapult"}>
                 <Container>
                     <Row>
                         <Col className="col text" sm={{span: 12, order:2}} xs={{ span: 12, order:2}} md={{ span: 8, order: 1}}>
@@ -44,7 +54,7 @@ class Catapult extends Component {
                             <span className="boldText">Get your career into warp speed</span>
                             <button className="theme-btn" onClick={this.showEnrollmentForm}>Begin your Journey</button>
                         </Col>
-                        <Col className="col image" sm={{span: 12, order:1}} xs={{ span: 12, order: 1}} md={{ span: 4, order: 1}}>
+                        <Col className="col image" sm={{span: 12, order:1}} xs={{ span: 12, order: 1}} md={{ span: 4, order: 2}}>
                             <img src={catapult_img} alt="Catapult"/>
                         </Col>
                     </Row>

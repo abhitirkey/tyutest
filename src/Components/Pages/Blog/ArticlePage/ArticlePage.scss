@@ -1,0 +1,32 @@
+.article__title {
+    font-size: 2rem;
+}
+
+.article__top__links {
+    display: flex;
+    div {
+        align-self: flex-end;
+        margin-bottom: 5px;
+    }
+    .social__media__share {
+        font-size: 1.5rem;
+        display:flex;
+        width: 8rem;
+        justify-content: space-between;
+    }
+    margin: 2rem 0 1rem 0;
+}
+
+.main__article__section > img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top 25%;
+}
+
+.article__text {
+    margin: 2rem 0 1rem 0;
+    padding: 0 5%;
+    text-align: justify;
+}

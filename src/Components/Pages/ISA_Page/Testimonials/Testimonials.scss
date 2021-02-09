@@ -1,100 +1,204 @@
 @import "../../../sass-global.scss";
 
-.testimonials{
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-}
+// ----------------------------
+// Customize the slider/carousel section
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 75px;
-}
-
-.testimonial-Card {
-
-    position: relative;
-    flex-basis: 30%;
-
-    background-color: white;
-    box-shadow: 5px 5px 5px 5px rgb(201, 201, 201);
-
+.Testimonials {
+    padding: 1.5em 0;
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
+}
 
-    width: 80%;
+.Testimonials > h2 {
+    text-align: center;
+}
 
-    margin: 3vh 2vw 3vh 2vw;
-    
+.Testimonials > .carousel {
+    padding: 1.5rem 0;
+}
+
+.Testimonials > a {
+    // This is the read more button link
+    margin: 1rem;
+    text-align: center;
+    color: rgb(153, 153, 153);
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.testimonial-Slide {
+    height: fit-content;
+    margin: 0 15%;
+    box-shadow: 5px 5px 5px 5px rgba(126, 126, 126, 0.103);
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    position: relative;
+    padding: 0 3rem;
+    z-index: 50;
+
+    .backgroundQuoteLeft {
+        position: absolute;
+        top: -1rem;
+        left: 2rem;
+        color: #FAF5F6;
+        font-size: 4rem;
+    }
+
+    .backgroundQuoteRight {
+        position: absolute;
+        bottom: -1rem;
+        right: 2rem;
+        color: #FAF5F6;
+        font-size: 4rem;
+    }
+}
+
+.testimonial-Slide > .slideText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+
+    height: 26rem;
+    padding: 1rem;
+
+    z-index: 100;
+
+    svg {
+        font-size: 1.5rem;
+    }
+
     p {
-        margin: 5px 20px 0px 20px;
+        padding: 0 1.5rem;
     }
 
-    .quote {
-        margin: 10px;
+    iframe {
+        height: 75%;
+        width: 90%;
+    }
+    
+    .quoteLeft {
+        align-self: flex-start;
+        margin: 0 1rem 1rem 0;
+        color: rgb(224, 224, 224);
     }
 
-    .right {
-        margin-top: -5px;
-        width: 92%;
-        svg {
-            float: right;
-        }
+    .quoteRight {
+        align-self: flex-end;
+        margin: 1rem 0 0 1rem;
+        color: rgb(224, 224, 224);
+        // position: relative;
+        // top: -35px;
     }
+}
 
-    hr {
-        background-color: $themePink;
-        height: 2px;
+.carousel-inner {
+    padding: 0;
+}
+
+.carousel-indicators {
+   margin-top: 2rem;
+}
+
+.carousel-indicators > li {
+    background-color: rgb(143, 143, 143);
+}
+
+.testimonial-Slide > .slideBio {
+    border-top: 2px solid $themePink;
+    padding-top: 1rem; 
+
+    display: flex;
+    justify-content: space-around;
+    height: 6rem;
+
+    z-index: 100;
+
+    img {
+        border: 1px solid rgb(223, 223, 223);
+        border-radius: 50%    ;
+        -webkit-border-radius: 50%    ;
+        -moz-border-radius: 50%    ;
+        -ms-border-radius: 50%    ;
+        -o-border-radius: 50%    ;
+        margin-right: 5px;
+    }    
+    span {
+        font-size: 1.1rem;
+        align-self: center;
+        // font-weight: 600;
     }
+}
 
-    .testimonial-text-container{
-        height: 350px;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-    }
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23a2a2a2' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
 
-    .testimonial-User {
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23a2a2a2' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.readMore {
+    padding: 1rem 2rem;
+    box-shadow: 5px 5px 5px 0 rgba(126, 126, 126, 0.103);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+// ----------------------------
+
+@media only screen and (min-width: 768px){
+    .testimonial-Slide {
         display: flex;
-        align-items: center;
+        justify-content: space-between;
+        height: 26rem;
+    }
+    
+    .testimonial-Slide > .slideText {
+        height: inherit;
+    }
+
+    .testimonial-Slide > .slideBio {
+        order: 1;
+        width: 20%;
+        height: inherit;
+        flex-direction: column;
         justify-content: center;
-        height: 5rem;
+        text-align: center;
+        border: none;
+        margin-right: 2rem;
+    }
 
-        margin: 0px 10px 20px 20px;
-        img {
-            flex: 1;
-            max-width: 25%;
-            border-radius: 50%        ;
-            -webkit-border-radius: 50%        ;
-            -moz-border-radius: 50%        ;
-            -ms-border-radius: 50%        ;
-            -o-border-radius: 50%        ;
-            border:1px solid #ababab;
-        }
-        span {
-            flex: 1;
-            padding: 0 10%;
-            font-weight: bolder;
-            // flex: 75%;
-        }
+    .slideBio > img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .slideText {
+        order: 2;
+        flex: 1;
     }
 }
 
-@media only screen and (max-width: 900px) {
-    .testimonial-Card {
-        flex-basis: 45%;
-    }
-}
+// @media only screen and (max-width: 900px) {
+//     .testimonial-Card {
+//         flex-basis: 45%;
+//     }
+// }
 
-@media only screen and (max-width: 768px) {
-    .testimonial-Card {
-        flex-basis: 90%;
-        .testimonial-text-container {
-            height: fit-content;
-        }
-    }
-}
+// @media only screen and (max-width: 768px) {
+//     .testimonial-Card {
+//         flex-basis: 90%;
+//         .testimonial-text-container {
+//             height: fit-content;
+//         }
+//     }
+// }

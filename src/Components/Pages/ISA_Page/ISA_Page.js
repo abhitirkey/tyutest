@@ -1,6 +1,5 @@
 import React, {useLayoutEffect} from 'react'
 
-import Header from '../../Header/Header'
 import Banner from './Banner/Banner'
 import Journey from './Journey/Journey'
 import Academy from './Academy/Academy'
@@ -9,6 +8,7 @@ import Mentoring from './Mentoring/Mentoring'
 import Companies from './Companies/Companies'
 import Placement from './Placement/Placement'
 import Testimonials from './Testimonials/Testimonials'
+import TestimonialsSlider from './Testimonials/TestimonialsSlider'
 import Enroll from './Enroll/Enroll'
 import Catapult from './Catapult/Catapult'
 
@@ -23,7 +23,6 @@ function ISA_Page() {
 
     return (
         <div className="PageContainer">
-            <Header/>
             <div className="AllSections">
                 <Banner/>
                 <Journey/>
@@ -32,7 +31,7 @@ function ISA_Page() {
                 <Mentoring/>
                 <Companies/>
                 <Placement/>
-                <Testimonials/>
+                <TestimonialsSlider/>
                 <Enroll/>
                 <Catapult/>  
             </div>

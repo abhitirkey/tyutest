@@ -1,6 +1,5 @@
 import React, {useLayoutEffect} from 'react'
 
-import HomePageHeader from '../../Header/HomePageHeader'
 import HomeBanner from './Banner/Banner'
 import BannerTwo from './BannerTwo/BannerTwo'
 import CoreFeatures from './CoreFeatures/CoreFeatures'
@@ -18,15 +17,12 @@ function Homepage() {
     });
 
     return (
-        <div className="HomePageContainer">
-            <HomePageHeader/>
-            <div className="AllSections Homepage">
-                <HomeBanner/>
-                <BannerTwo/>
-                <CoreFeatures/>
-                <Who/>
-                <LastSection/>
-            </div>
+        <div className="AllSections Homepage">
+            <HomeBanner/>
+            <BannerTwo/>
+            <CoreFeatures/>
+            <Who/>
+            <LastSection/>
         </div>
     )
 }

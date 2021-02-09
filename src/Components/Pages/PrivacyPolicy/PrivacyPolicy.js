@@ -1,7 +1,6 @@
 import React, {useLayoutEffect} from 'react'
 
 import './PrivacyPolicy.scss'
-import Header from '../../Header/Header'
 
 function PrivacyPolicy() {
 
@@ -11,7 +10,6 @@ function PrivacyPolicy() {
 
     return (
         <div>
-             <Header/>
              <div className="section-content privacy">
                 <div className="intro" style={{padding: '5rem 0 1rem 0'}}>
                     <h2 style={{fontWeight: 'bolder'}}>Privacy Policy for Shramista Tech Private Limited</h2>

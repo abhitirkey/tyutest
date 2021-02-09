@@ -1,5 +1,4 @@
 import React, {useLayoutEffect} from 'react'
-import Header from '../../Header/Header'
 
 import WhyUsPNG1 from './WhyUs1.png'
 import WhyUsPNG2 from './WhyUs2.png'
@@ -16,7 +15,6 @@ function HireFromUs() {
 
     return (
         <>
-            <Header/>
             <div className="page-top-section HireFromUs">
                 <h2 className="boldText center">Hire From Us</h2>
                 <p className="headerText center">Do you seek resource ready employees?<br/>Want to avoid huge training costs?<br/>Come partner with tyutee and let us deal with your overhead reskilling cost.<br/>We provide you industry ready candidates at Zero cost.</p>

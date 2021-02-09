@@ -1,5 +1,4 @@
 import React, {useLayoutEffect} from 'react'
-import Header from '../../Header/Header'
 
 import {Link} from 'react-router-dom'
 
@@ -13,7 +12,6 @@ function TermsOfUse() {
 
     return (
         <div>
-             <Header/>
              <div className="section-content terms">
                 <div className="intro" style={{padding: '5rem 0 1rem 0'}}>
                     <h2 style={{fontWeight: 'bolder'}}>Terms of Use</h2>

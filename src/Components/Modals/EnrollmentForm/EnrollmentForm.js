@@ -192,20 +192,18 @@ export class EnrollmentForm extends Component {
             color: '#797979'
         };
 
-        // alert(window.location.pathname);
-
         let course_options = <> 
                                 <option value="" disabled>Course*</option>    
                                 <option value={0} selected>Python-Django Developer</option>
                                 <option value={1} disabled>UI/UX Design</option>
                             </>;
 
-        if(window.location.pathname === '/courses/python-django-developer'){
+        if(window.location.pathname === '/courses/python-django-developer' || this.props.course === 'python'){
             course_options = <> 
                                 <option value={0} selected>Python-Django Developer</option>
                             </>;
         }
-        else if(window.location.pathname === '/courses/ui-ux-developer'){
+        else if(window.location.pathname === '/courses/ui-ux-developer' || this.props.course === 'ui/ux'){
             course_options = <> 
                                 <option value={1} selected>UI/UX Design</option>
                             </>;

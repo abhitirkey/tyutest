@@ -1,5 +1,4 @@
 import React, {useLayoutEffect} from 'react'
-import Header from '../../Header/Header'
 
 import CourseHeader from './CourseHeader'
 import CourseFeatures from './CourseFeatures'
@@ -19,7 +18,6 @@ function Courses() {
 
     return (
         <>
-            <Header />
             <CourseHeader />
             {
                 pathname === '/courses/python-django-developer' ? 

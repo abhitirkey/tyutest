@@ -1,7 +1,5 @@
 import React, {useLayoutEffect} from 'react'
 
-import Header from '../../Header/Header'
-
 function ComingSoon() {
 
     useLayoutEffect(() => {
@@ -10,7 +8,6 @@ function ComingSoon() {
 
     return (
         <div>
-             <Header/>
              <div className="section-content coming_soon">
                 <div className="intro" style={{padding: '5rem 0 1rem 0'}}>
                     <h2 style={{fontWeight: 'bolder'}}>Coming soon</h2>

@@ -8,6 +8,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
+    "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
@@ -42,6 +43,9 @@
     ]
   },
   "devDependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }

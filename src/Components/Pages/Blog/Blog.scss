@@ -1,0 +1,247 @@
+@import "../../sass-global.scss";
+
+.blog {
+    padding: 8rem 5% 0 5%;
+}
+
+.blog__sidebar {
+    display: none;
+}
+
+.blog__articles > .top__section {
+    display: none;
+}
+
+.search__box > svg {
+    margin-top: 2%;
+}
+
+.search__box > .search__field {
+    color: gray;
+}
+
+.article__short {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+    align-items: center;
+    img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .article__text__part > p{
+        text-align: justify;
+    }
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.subscribe > form {
+    width: fit-content;
+    text-align: center;
+}
+
+.subscribe__input > input {
+    border: 1px solid $themePink;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1rem 0;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.thanks__for__subscribing {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    text-align: center;
+    svg {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+    .span {
+        font-size: 1.5rem;
+    }
+}
+
+.category__dropdown {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+    padding-bottom: 1rem;
+    
+    select {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .search__box {
+        display: flex;
+        padding: 5px;
+    }
+    .search__field {
+        
+        border: none;
+        width: 95%;
+        &:focus {
+            outline: none;
+        }
+
+    }
+}
+
+.blog__catapult {
+    background: #FAF5F6;
+    padding: 2rem 0;
+    .col {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .col > * {
+        margin-bottom: 1rem;
+    }
+}
+
+.no__posts__found {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+@media only screen and (min-width: 480px){
+    .category__dropdown {
+        flex-direction: row;
+        border-bottom: 1px solid gray;
+        padding-bottom: 1rem;
+        select {
+            width: auto;
+            flex: 1;
+            margin-right: 0.5rem;
+            margin-bottom: 0;
+        }
+    
+        .search__box {
+            display: flex;
+            flex-basis: 35%;
+            padding: 5px;
+        }
+    }
+
+    .subscribe__btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .subscribe__input > input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .form-control {
+        overflow: hidden;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .blog__top__section {
+        display: flex;
+    }
+
+    .category__dropdown {
+        display: none;
+    }
+
+    .blog__sidebar {
+        display: flex;
+        width: 20rem;
+        flex-direction: column;
+        flex-shrink: none;
+        margin-right: 2rem;
+    }
+
+    .blog__sidebar > span {
+        padding: 10px 20px;
+        &:hover {
+            cursor: pointer;
+            background: #FFEDF3;
+        } 
+    }
+
+    .blog__articles {
+        flex: 1;
+
+        .top__section {
+            display:block;
+            border-bottom: 1px solid gray;
+            padding: 10px 0;
+        }
+        .search__box {
+            display: flex;
+            margin-top: 1rem;
+            padding: 5px;
+        }
+        .search_box > svg {
+            margin-top: 2%;
+        }
+        .search__field {
+            
+            border: none;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    .subscribe {
+        flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
+    }
+}
+
+@media only screen and (min-width: 996px){
+    .blog__articles {
+        .top__section {
+            display: flex;
+        }
+        .search__box {
+            flex-basis: 30%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px){
+    .article__short {
+        flex-direction: row;
+
+        img {
+            height: 200px;
+            order: 2;
+        }
+    }
+}

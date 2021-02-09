@@ -1,0 +1,102 @@
+@import '../../sass-global.scss';
+
+.testimonialsPage {
+    padding: 8rem 1% 2rem 1%;
+}
+
+.testimonialsGrid {
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+}
+
+.testimonialsPage .testimonialCard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 5px 5px 5px 0 rgba(126, 126, 126, 0.103);
+    height: 15rem;
+    overflow: hidden;
+    z-index: 50;
+
+    .backgroundQuoteLeft {
+        position: absolute;
+        top: -1.5rem;
+        left: 2rem;
+        color: #FAF5F6;
+        font-size: 4rem;
+    }
+
+    .backgroundQuoteRight {
+        position: absolute;
+        bottom: -1.5rem;
+        right: 2rem;
+        color: #FAF5F6;
+        font-size: 4rem;
+    }
+    
+    .text{
+        display: flex;
+        flex-direction: column;
+        order: 2;
+        z-index: 100;
+    }
+
+    .text > p {
+        text-align: justify;
+        font-size: 13px;
+    }
+
+    .quoteLeft, .quoteRight{
+        font-size: 12px;
+    }
+
+    .text > .quoteRight {
+        align-self: flex-end;
+        position: relative;
+        top: -20px;    
+    }
+
+    .bio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 1rem;
+        z-index: 100;
+    }
+    .bio > img {
+        width: 70%;
+        border-radius: 50%    ;
+        -webkit-border-radius: 50%    ;
+        -moz-border-radius: 50%    ;
+        -ms-border-radius: 50%    ;
+        -o-border-radius: 50%    ;
+        border: 1px solid rgb(212, 212, 212);
+    }
+    .bio > span {
+        margin-top: 1rem;
+        font-weight: 900;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .testimonialsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+
+@media only screen and (min-width: 1024px){
+    .testimonialsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} 
+

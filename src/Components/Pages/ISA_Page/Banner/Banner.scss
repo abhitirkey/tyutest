@@ -97,6 +97,42 @@
     }
 }
 
+@media only screen and (orientation: portrait) and (min-width: 768px) {
+
+    .banner > .container > .row {
+
+        .col-md-6{
+            max-width: 100%;
+            flex: none;
+            justify-content: center;
+            align-items: center;
+            .titleDesktop {
+                visibility: hidden;
+                height:0;
+            }
+            .titleMobile {
+                visibility: visible;
+                height:fit-content;
+            }
+        }
+
+        .text {
+            margin-top: 3vh;
+            order: 2;
+        }
+
+        .image {
+            order: 1;
+        }
+    }
+
+    @media (max-height: 110vw){
+        .banner > .container > .row > .image > img {
+            width: 50%;
+        }
+    }
+}
+
 @media only screen and (max-width: 767px){
     .banner {
         .container{
@@ -125,7 +161,6 @@
                 h2 {
                     font-size:1.5em;
                 }
-                
             }
 
             .image {
@@ -135,8 +170,6 @@
                 }
             }
         }
-        
-        
     }
 }
 

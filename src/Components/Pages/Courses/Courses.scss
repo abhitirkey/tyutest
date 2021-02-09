@@ -53,7 +53,6 @@
 .courseFeature {
     display: inline-flex;
     align-items: center;
-    gap: 2rem;
     div {
         box-sizing: content-box;
         padding: 0.8rem;
@@ -66,6 +65,7 @@
         -ms-border-radius: 50%     ;
         -o-border-radius: 50%     ;
         flex-shrink: 0;
+        margin-right: 2rem;
     }
     span {
         max-width: 75%;

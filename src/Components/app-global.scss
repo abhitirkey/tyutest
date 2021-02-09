@@ -47,6 +47,16 @@ a {
     font-weight: 900;
 }
 
+.italic {
+    font-style: italic;
+}
+
+.pointer {
+    &:hover {
+        cursor: pointer;
+    } 
+}
+
 .center {
     text-align: center;
 }
@@ -91,13 +101,25 @@ a {
     //opacity: 90%;
     width: fit-content;
     &:hover 
-{
+    {
         // opacity: 100%;
     }
 
     &:focus {
         outline: none;
     }
+}
+
+body a {
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+}
+
+
+h2 a:hover {
+    text-decoration: none;
 }
 
 .themeLink {

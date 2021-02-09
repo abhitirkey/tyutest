@@ -1,7 +1,6 @@
 import React, {useLayoutEffect} from 'react'
 import './ContactUs.scss'
 
-import Header from '../../Header/Header'
 import ContactForm from './ContactForm'
 import Map from './Map'
 
@@ -13,7 +12,6 @@ function ContactUs() {
 
     return (
         <div className="contactUs">
-            <Header/>
             <div className="section-content contactUsContent">
                 <div className="intro">
                     <h2>Get In Touch</h2>

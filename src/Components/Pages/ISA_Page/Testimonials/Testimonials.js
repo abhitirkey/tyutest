@@ -14,12 +14,10 @@ function Testimonials() {
             <h2>What folks say about us</h2>
             <div className="card-container">
                     <div className="testimonial-Card">
-                        <div className="testimonial-text-container">
-                            <div>   
-                                <FaQuoteLeft className="quote left"/>
-                                <p>The Course content covers the basics very well. I got great mentorship under mentors available here. When I joined tyutee I didn’t have an in depth understanding about many of the concepts but now I proudly can tell that I am quite conversant with the topics. The support and assistance that I have received through tyutee has been exemplary.</p>
-                                <div className="quote right"><FaQuoteRight /></div>
-                            </div>    
+                        <div className="testimonial-text-container"> 
+                            <FaQuoteLeft className="quote left"/>
+                            <p>The Course content covers the basics very well. I got great mentorship under mentors available here. When I joined tyutee I didn’t have an in depth understanding about many of the concepts but now I proudly can tell that I am quite conversant with the topics. The support and assistance that I have received through tyutee has been exemplary.</p>
+                            <div className="quote right"><FaQuoteRight /></div>
                         </div>
                         <hr/>
                         <div className="testimonial-User">

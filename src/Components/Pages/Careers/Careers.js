@@ -1,5 +1,4 @@
 import React, {useLayoutEffect} from 'react'
-import Header from '../../Header/Header'
 import './Careers.scss'
 import CareerList from './CareerList.json'
 
@@ -13,7 +12,6 @@ function Careers() {
 
     return (
         <>
-            <Header/>
             <div className="page-top-section">
                 <h2 style={{marginBottom: '3rem'}} className="boldText center">We are hiring!</h2>
                 <div className="careers-grid">
